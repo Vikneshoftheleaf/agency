@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Marketing Agency</title>
+    <link rel="stylesheet" href="../output.css">
+    <script src="https://kit.fontawesome.com/067fc88846.js" crossorigin="anonymous"></script>
+    <style>
+        .scroll-container{
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            white-space: nowrap;
+        }
+        .scroll-card{
+            display: inline-block;
+            scroll-snap-align: start;
+            margin-right: 1rem;
+        }
+        .no-scrollbar{
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+</head>
+<body class="bg-slate-100">
+
+    <div class="goBack fixed bottom-5 right-5 z-10">
+        <a href="/projects" class="lg:text-lg font-base font-bold px-4 py-2 bg-slate-900 text-slate-100 rounded-full">Go To Projects</a>
+    </div>
+
+    <section class="nav lg:mx-20 lg:my-10 mx-10 my-5">
+        <div class="namitems flex justify-between">
+
+            <div class="logo">
+                <h1 class="lg:text-4xl text-xl font-bold">Logo</h1>
+            </div>
+
+            <div class="links lg:flex items-center gap-5 hidden ">
+                <a href="" class="text-base font-semibold hover:text-indigo-900 transition duration-500 ease-in-out">About</a>
+                <a href="" class="text-base font-semibold hover:text-indigo-900 transition duration-500 ease-in-out">Service</a>
+                <a href="" class="text-base font-semibold hover:text-indigo-900 transition duration-500 ease-in-out">Portfolio</a>
+                <a href="" class="text-base font-semibold hover:text-indigo-900 transition duration-500 ease-in-out">Blog</a>
+            </div>
+
+            <div class="cta-top">
+                <button class="px-4 py-2 rounded-tr-xl rounded-bl-xl lg:text-xl text-lg font-semibold bg-indigo-900 text-slate-100">Contact</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="herbanner lg:mx-20 lg:mt-20 lg:mb-40 m-10">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-10">
+
+            <div class="title">
+                <h1 class="lg:text-[52px] text-[36px] leading-[40px] font-bold lg:leading-[70px] text-indigo-900">
+                    Discover & solve your digital problem
+                </h1>
+                <p class="lg:text-base text-sm mt-5">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptates vel ipsam atque officiis ullam est molestias neque alias sunt deserunt.
+                </p>
+
+                <div class="mt-5 flex gap-5 items-center justify-start">
+                    <button class="lg:text-lg text-base font-semibold bg-indigo-900 px-4 py-2 text-slate-100 rounded-tr-xl rounded-bl-xl">Hire Us</button>
+                    <button class="lg:text-lg text-base font-semibold"> <u>Watch Demo</u></button>
+                </div>
+
+                <div class="mt-10 flex justify-start gap-10">
+                    <div class="stat flex flex-col text-center">
+                        <h1 class="lg:text-2xl text-xl font-bold text-blue-900">6.5M+</h1>
+                        <p class="lg:text-sm text-xs">
+                            User over the world
+                        </p>
+                    </div>
+                    <div class="stat flex flex-col text-center">
+                        <h1 class="lg:text-2xl text-xl font-bold text-blue-900">20Y+</h1>
+                        <p class="lg:text-sm text-xs">
+                            Work experiences
+                        </p>
+                    </div>
+                    <div class="stat flex flex-col text-center">
+                        <h1 class="lg:text-2xl text-xl font-bold text-blue-900">300.9</h1>
+                        <p class="lg:text-sm text-xs">
+                            Client's reviews
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="banner-img lg:w-full">
+                <img src="/digigen/src/pexels-fauxels-3182812.jpg" alt="" class="rounded-full">
+
+            </div>
+
+        </div>
+    </section>
+
+    <section class="service lg:m-20 m-10">
+        <div class="serv-head flex flex-col gap-4 justify-center items-center text-center">
+            <h2 class="text-4xl font-bold text-indigo-900">
+                Our all services
+            </h2>
+            <p class="text-sm lg:w-1/2">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores qui veritatis ad debitis totam similique voluptates a nobis laudantium. Dolores.
+            </p>
+            <div class="pills flex gap-4 mt-5 flex-wrap justify-center">
+                <span class="text-base font-semibold bg-indigo-100 px-4 py-2 rounded-full hover:text-indigo-100 hover:bg-indigo-900 transition ease-in-out duration-500">All</span>
+                <span class="text-base font-semibold bg-indigo-100 px-4 py-2 rounded-full hover:text-indigo-100 hover:bg-indigo-900 transition ease-in-out duration-500">Web design</span>
+                <span class="text-base font-semibold bg-indigo-100 px-4 py-2 rounded-full hover:text-indigo-100 hover:bg-indigo-900 transition ease-in-out duration-500">Print design</span>
+                <span class="text-base font-semibold bg-indigo-100 px-4 py-2 rounded-full hover:text-indigo-100 hover:bg-indigo-900 transition ease-in-out duration-500">UI/Ux</span>
+                <span class="text-base font-semibold bg-indigo-100 px-4 py-2 rounded-full hover:text-indigo-100 hover:bg-indigo-900 transition ease-in-out duration-500">Product design</span>
+
+            </div>
+        </div>
+    </section>
+
+    <section class="serv-cards lg:m-20 m-10">
+        <div class="cards grid lg:grid-cols-3 grid-cols-1 gap-10">
+
+            <div class="card relative flex flex-col gap-2 bg-white justify-start rounded-xl shadow-indigo-100 hover:bg-indigo-900 hover:text-slate-200 shadow-2xl p-8 overflow-hidden transition duration-500 ease-in-out">
+                <div class="p-4 bg-sky-300 text-indigo-950 w-[50px] h-[50px] rounded-full flex justify-center items-center">
+                    <i class="fa-solid fa-pen-nib"></i>
+                </div>
+                <h2 class="text-lg font-bold">Product Design</h2>
+                <ul class="gap-1 flex flex-col text-sm">
+                    <li>Concept pf prduct</li>
+                    <li>Sketch product</li>
+                    <li>Product ux</li>
+                    <li>Product creation & UI</li>
+                </ul>
+                <div class="div h-[200px] w-[200px] bg-indigo-200 rounded-full absolute lg:-bottom-20 lg:-right-20 -bottom-28 -right-28 "></div>
+            </div>
+
+            <div class="card relative flex flex-col gap-2  justify-start rounded-xl shadow-indigo-100 hover:bg-indigo-900 hover:text-slate-200 shadow-xl p-8 overflow-hidden transition duration-500 ease-in-out">
+                
+                <div class="p-4 bg-emerald-300 text-indigo-950 w-[50px] h-[50px] rounded-full flex justify-center items-center">
+                    <i class="fa-solid fa-compass-drafting"></i>
+                </div>
+
+                <h2 class="text-lg font-bold">Web Design</h2>
+                <ul class="gap-1 flex flex-col text-sm">
+                    <li>Minimal landingpage design</li>
+                    <li>Wirefram design</li>
+                    <li>Interactive website design</li>
+                    <li>App design and solution</li>
+                </ul>
+                <div class="div h-[200px] w-[200px] bg-indigo-200 rounded-full absolute lg:-bottom-20 lg:-right-20 -bottom-28 -right-28 "></div>
+            </div>
+
+            <div class="card relative flex flex-col gap-2  justify-start rounded-xl shadow-indigo-100 hover:bg-indigo-900 hover:text-slate-200 shadow-xl p-8 overflow-hidden transition duration-500 ease-in-out">
+                
+                <div class="p-4 bg-red-300 text-indigo-950 w-[50px] h-[50px] rounded-full flex justify-center items-center">
+                    <i class="fa-solid fa-object-ungroup"></i>
+                </div>
+
+                <h2 class="text-lg font-bold">UX/UI</h2>
+                <ul class="gap-1 flex flex-col text-sm">
+                    <li>User interface desgin</li>
+                    <li>Ui problems solving</li>
+                    <li>User testing</li>
+                    <li> Modeboard creation</li>
+                </ul>
+                <div class="div h-[200px] w-[200px] bg-indigo-200 rounded-full absolute lg:-bottom-20 lg:-right-20 -bottom-28 -right-28 "></div>
+            </div>
+
+            <div class="card relative flex flex-col gap-2  justify-start rounded-xl shadow-indigo-100 hover:bg-indigo-900 hover:text-slate-200 shadow-xl p-8 overflow-hidden transition duration-500 ease-in-out">
+                <div class="p-4 bg-yellow-300 text-indigo-950 w-[50px] h-[50px] rounded-full flex justify-center items-center">
+                    <i class="fa-solid fa-film"></i>
+                </div>
+                <h2 class="text-lg font-bold">Graphic Design</h2>
+                <ul class="gap-1 flex flex-col text-sm">
+                    <li>Concept pf prduct</li>
+                    <li>Sketch product</li>
+                    <li>Product ux</li>
+                    <li>Product creation & UI</li>
+                </ul>
+                <div class="div h-[200px] w-[200px] bg-indigo-200 rounded-full absolute lg:-bottom-20 lg:-right-20 -bottom-28 -right-28 "></div>
+            </div>
+
+            <div class="card relative flex flex-col gap-2  justify-start rounded-xl shadow-indigo-100 hover:bg-indigo-900 hover:text-slate-200 shadow-xl p-8 overflow-hidden transition duration-500 ease-in-out">
+                <div class="p-4 bg-pink-300 text-indigo-950 w-[50px] h-[50px] rounded-full flex justify-center items-center">
+                    <i class="fa-solid fa-print"></i>
+                </div>
+                <h2 class="text-lg font-bold">Print Design</h2>
+                <ul class="gap-1 flex flex-col text-sm">
+                    <li>Flyer design</li>
+                    <li>Illustration</li>
+                    <li>Posters & billboard design</li>
+                    <li>Book cover & calender</li>
+                </ul>
+                <div class="div h-[200px] w-[200px] bg-indigo-200 rounded-full absolute lg:-bottom-20 lg:-right-20 -bottom-28 -right-28 "></div>
+            </div>
+
+            <div class="card relative flex flex-col gap-2  justify-start rounded-xl shadow-indigo-100 hover:bg-indigo-900 hover:text-slate-200 shadow-xl p-8 overflow-hidden transition duration-500 ease-in-out">
+                <div class="p-4 bg-orange-300 text-indigo-950 w-[50px] h-[50px] rounded-full flex justify-center items-center">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h2 class="text-lg font-bold">Web development</h2>
+                <ul class="gap-1 flex flex-col text-sm">
+                    <li>Development with HTML</li>
+                    <li>Development with javascript</li>
+                    <li>Development with CSS</li>
+                    <li>Boostrap</li>
+                </ul>
+                <div class="div h-[200px] w-[200px] bg-indigo-200 rounded-full absolute lg:-bottom-20 lg:-right-20 -bottom-28 -right-28"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section class="video-audit lg:m-20 m-10">
+        <div class="grid lg:grid-cols-2 grid-cols-1 gap-5">
+
+            <div class="video-holder bg-indigo-100 rounded-lg ">
+                <video controls class="h-full w-full">
+                    <source src="./src/pexels-artem-podrez-5725960-1280x720-30fps.mp4" type="video/mpeg">
+                </video>
+            </div>
+
+            <div class="video-about flex flex-col p-4 gap-5">
+                <h3 class="text-2xl font-bold">About our agency</h3>
+
+                <p class="text-sm">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In molestias accusamus illo sequi corrupti incidunt at similique excepturi neque doloremque?</p>
+
+                <button class="border w-1/2 lg:w-1/4 border-indigo-900 text-indigo-900 px-4 py-2 font-semibold text-base rounded-bl-xl rounded-tr-xl hover:bg-indigo-900 hover:text-indigo-100 transition duration-300 ease-in-out">View more</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="works lg:m-20 m-10 hidden">
+        <div class="work-head  text-indigo-900 flex justify-between items-center gap-10">
+            <h4 class="text-4xl font-bold">Recent Works</h4>
+            <u class="text-base">View All</u>
+        </div>
+        <div class="scroll-container mt-10">
+            <div class="scroll-card lg:h-[500px] h-[300px] lg:w-[50%] w-[100%] bg-indigo-900 rounded-lg bg-cover">
+                <img src="/digigen/src/4326821.jpg" alt="" class="h-full">
+            </div>
+            <div class="scroll-card lg:h-[500px] h-[300px] lg:w-[50%] w-[100%] bg-indigo-900 rounded-lg">
+                <img src="/digigen/src/4478107.jpg" alt="" class="h-full">
+            </div>
+            <div class="scroll-card lg:h-[500px] h-[300px] lg:w-[50%] w-[100%] bg-indigo-900 rounded-lg">
+                <img src="/digigen/src/7610171.jpg" alt="" class="h-full">
+            </div>
+            <div class="scroll-card lg:h-[500px] h-[300px] lg:w-[50%] w-[100%] bg-indigo-900 rounded-lg">
+                <img src="/digigen/src/2643594.jpg" alt="" class="h-full w-full">
+
+            </div>
+        </div>
+    </section>
+
+    <section class="feedback lg:m-20 m-10 hidden">
+        <h1 class="text-4xl font-bold text-indigo-900">User feedback</h1>
+        <div class="scroll-container mt-10 no-scrollbar">
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-[100%] w-[100%] bg-indigo-900 rounded-lg relative overflow-hidden">
+                <div class="ball h-[300px] w-[300px] bg-indigo-200 rounded-full absolute -right-12 -bottom-44"></div>
+            </div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-[100%] w-[100%] bg-indigo-900 rounded-lg ">
+
+            </div>
+
+        </div>
+        
+    </section>
+
+    <section class="con lg:m-20 m-10">
+
+        <div class="form flex flex-col gap-4 justify-center items-center">
+            <h1 class="text-4xl font-bold text-indigo-900">Contact Us</h1>
+            <div class="form-el flex flex-col gap-2 lg:w-1/2">
+                <label for="" class="text-base font-bold text-indigo-900">Name</label>
+                <input type="text" class="caret-indigo-900 p-4 border-2 border-indigo-200 rounded-lg" placeholder="John Doe">
+                <label for="" class="text-base font-bold text-indigo-900">Email</label>
+                <input type="email" class="caret-indigo-900 p-4 border-2 border-indigo-200 rounded-lg" placeholder="johnDoe@gmail.com">
+                <label for="" class="text-base font-bold text-indigo-900">Message</label>
+                <textarea class="h-32 caret-indigo-900 p-4 border-2 border-indigo-200 rounded-lg resize-none" placeholder="Write here"></textarea>
+                <button class="text-indigo-100 bg-indigo-900 rounded-lg py-2 font-semibold mt-5">Submit</button>
+
+
+    
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="footer bg-indigo-100">
+        <div class="  py-14 lg:mx-20 lg:mt-20 mx-10 mt-10 footer-con grid lg:grid-cols-6 grid-cols-1 gap-8 text-indigo-900">
+
+            <div class="lg:col-span-2">
+                <h2 class="text-2xl font-bold">Logo</h2>
+                <p class="text-base font-semibold">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum, aperiam.</p>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold">Product</h2>
+                <ul class="mt-2 flex flex-col gap-1 font-semibold">
+                    <li>Home</li>
+                    <li>Features</li>
+                    <li>FAQ</li>
+                </ul>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold">Company</h2>
+                <ul class="mt-2 flex flex-col gap-1 font-semibold">
+                    <li>About us</li>
+                    <li>What we do</li>
+                    <li>Financial info</li>
+                </ul>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold">More info</h2>
+                <ul class="mt-2 flex flex-col gap-1 font-semibold">
+                    <li>Agency</li>
+                    <li>Portfolio</li>
+                </ul>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold">Product</h2>
+                <ul class="mt-2 flex  gap-1 font-semibold">
+                    <a href=""><i class="fa-brands fa-facebook"></i></a>
+                    <a href=""><i class="fa-brands fa-discord"></i></a>
+                    <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                </ul>
+            </div>
+
+            
+
+        </div>
+        <div class="flex lg:justify-between flex-wrap gap-10 p-8 justify-center text-indigo-900">
+            <div class="copy">
+                <h6 class="text-sm">&copy;<span id="year"></span> Digital Agency. All rights reserved.</h6>
+            </div>
+
+            <div class="alt-links flex gap-10 text-sm">
+                <h6>Terms & conditions</h6>
+                <h6>Privact & policy</h6>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var yearhold = document.querySelector("#year");
+        var yearnow = new Date().getFullYear();
+        yearhold.textContent = yearnow;
+    </script>
+    
+</body>
+
+</html>

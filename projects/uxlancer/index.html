@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UX/UI Free Lancer</title>
+    <link rel="stylesheet" href="/output.css">
+</head>
+
+<body class="h-screen">
+
+    <div class="goBack fixed bottom-5 right-5 z-10 ">
+        <a href="/projects" class="lg:text-lg font-base font-bold px-4 py-2 bg-slate-900 text-slate-100 rounded-full">Go To Projects</a>
+    </div>
+
+    <section class="nav lg:mx-20 lg:py-6 border-b-2 mx-5 py-3">
+        <div class="nav flex justify-between items-center">
+            <div class="logo">
+                <h1 class="text-4xl font-bold">Logo</h1>
+            </div>
+            <div class="na-links lg:flex hidden gap-5 items-center ">
+                <a href="" class="text-base font-semibold">Home</a>
+                <a href="" class="text-base font-semibold">About</a>
+                <a href="" class="text-base font-semibold">Projects</a>
+                <a href="" class="text-base font-semibold">Services</a>
+                <a href="" class="text-base font-semibold">Blog</a>
+
+            </div>
+            <div class="nav-cta">
+                <button class="px-4 py-2 border-2 border-black font-semibold">Let's chat</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="banner h-screen">
+        <div class="ban-con grid lg:grid-cols-2 grid-cols-1">
+            <div class="bantxt ">
+                <div class="ban-text-one lg:mx-20 flex-col flex gap-8 lg:pt-12 mx-10 py-12">
+                    <h1 class="lg:text-6xl text-4xl font-bold ">
+                        Hi! i Am <span
+                            class="bg-purple-500 text-slate-100 font-semibold text-xl self-items-start rounded-full px-4 py-2">UI/UX</span><br>
+                        Richard Brain
+                    </h1>
+
+                    <p class="text-base font-semibold">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                        Delectus, laudantium?</p>
+
+                    <div class="ban-cta flex gap-5 ">
+                        <button class="bg-orange-500 px-4 py-2 text-slate-100 font-bold">Hire Me</button>
+                        <button class="font-bold">Projets</button>
+                    </div>
+                </div>
+
+
+                <div class="bg-black grid lg:grid-cols-3 grid-cols-1 text-slate-100 lg:px-16 lg:py-12 lg:gap-12 gap-4 lg:mt-2 px-10 py-5">
+                    <div class="col-span-1 foo-txt-one flex lg:flex-col lg:gap-2 gap-2  justify-between">
+                        <h2 class="lg:text-2xl text-base font-bold">Project <br> Statistics 2023</h2>
+                        <button class="px-4 py-2 text-black bg-yellow-300 text-base font-semibold">Know More</button>
+                    </div>
+                    <div class=" col-span-2 stats font-semibold lg:text-base text-sm">
+                        <div class="entry flex justify-between border-b-2 py-2">Webdesign <span>76</span></div>
+                        <div class="entry flex justify-between border-b-2 py-2">Brand Identity <span>64</span></div>
+                        <div class="entry flex justify-between border-b-2 py-2">Mobile App Design <span>37</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-slate-300 relative flex flex-col gap- justify-center items-center  py-12 h-[613px]" >
+
+                <h3 class="text-xl text-left font-semibold absolute top-10">Create Your site in <b>Figma <br> Sketch</b> or <b>XD</b></h3>
+
+                <img src="/pexels-italo-melo-2379004-removebg-preview.png" alt="" >
+
+                    <div class="bg-white px-4 py-2 absolute bottom-10">
+                        <input type="text" class="p-1 bg-white" placeholder="Subscribe my Newsletter">
+                           <button class="bg-black px-3 py-2 text-slate-100 font-bold rounded-full">Subscribe</button>
+                    </div>
+                
+            </div>
+        </div>
+    </section>
+    <section class="py-10">
+        <h1 class="text-base text-gray-500 text-center">&copy;<span id="year"></span>. Made by chillfeast</h1>
+    </section>
+
+    <script>
+        var yearnow = new Date().getFullYear();
+        var yearhold = document.getElementById("year");
+        yearhold.textContent = yearnow;
+    </script>
+</body>
+
+</html>

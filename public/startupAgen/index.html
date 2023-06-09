@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startup Agency</title>
+    <link rel="stylesheet" href="../../css/output.css">
+
+    <style>
+        .scroll-container{
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            white-space: nowrap;
+        }
+        .scroll-card{
+            display: inline-block;
+            scroll-snap-type: start;
+            margin-right: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <section class="nav lg:mx-20 lg:mt-10 mx-10 mt-5">
+        <div class="navbar flex justify-between items-center">
+
+            <div class="logo">
+                <h1 class="lg:text-4xl text-xl font-bold">Logo</h1>
+            </div>
+
+            <div class="navlinks lg:flex hidden gap-5 lg:items-center">
+                <a href="" class="font-semibold">About</a>
+                <a href="" class="font-semibold">Projects</a>
+                <a href="" class="font-semibold">Blog</a>
+            </div>
+
+            <div class="cta-nav">
+                <button class="lg:text-md text-base font-semibold px-4 py-2 bg-yellow-300 rounded-full shadow-2xl"
+                    style="box-shadow: 4px 4px black;">Contact</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="herotxt lg:mx-20 lg:mt-10 mx-10">
+        <div class="cont flex justify-center items-center py-10 ">
+            <h1 class="lg:text-[72px] text-[32px] font-bold lg:leading-[68px] lg:w-2/3 text-center">Build up your
+                business together</h1>
+        </div>
+    </section>
+
+    <section class="bannerimg lg:mx-20 mx-10 mb-10">
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+            <div class=" rounded-tl-[40%] rounded-br-[40%] overflow-hidden">
+                <img src="../digigen/src/pexels-fauxels-3182812.jpg" alt="">
+            </div>
+            <div class=" bg-sky-300 rounded-tr-[40%] rounded-bl-[40%]">
+                <div class="ban-img-txt lg:my-20 lg:mx-28 mx-10 my-12 flex flex-col lg:gap-10 gap-5">
+                    <div class="ban-heas flex justify-between">
+                        <h1 class="lg:text-2xl text-md font-bold">5000+ <br> satisfied clients</h1>
+                        <h2 class="lg:text-2xl text-md font-bold">10-years <br> experince</h2>
+                    </div>
+                    <div class="con-paraa ">
+                        <p class="lg:text-base text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam
+                            facilis neque illum voluptatem modi corporis!</p>
+                    </div>
+                    <div class="ba-cta flex gap-10 items-center">
+                        <button class="bg-black font-semibold text-sky-300 px-4 py-2 rounded-full">View</button>
+                        <button class="font-semibold">Show case</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="service lg:m-20 m-10">
+        <div class="serve-head lg:text-6xl text-2xl font-bold relative overflow-hidden">
+            <h2 class="">What type of <br> servie we provide</h2>
+            <div
+                class="lg:h-[200px] lg:w-[200px] h-32 w-32 bg-pink-100 rounded-full absolute lg:right-0 -right-10 top-10">
+            </div>
+        </div>
+
+        <div class="serve-body grid lg:grid-cols-3 grid-cols-1 rounded-xl shadow-xl mt-10 lg:p-8 p-4 gap-5">
+            <div class="card p-4 flex gap-5 flex-col">
+                <i class="h-12 w-12 rounded-full bg-yellow-300"></i>
+                <h3 class="text-2xl font-bold">Design</h3>
+                <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odio velit
+                    aspernatur a dicta quasi neque rerum iusto iste sapiente nemo cumque, temporibus rem est possimus
+                    voluptas! Dolorum, quas illo?</p>
+
+            </div>
+            <div class="card p-4 flex gap-5 flex-col">
+                <i class="h-12 w-12 rounded-full bg-pink-300"></i>
+                <h3 class="text-2xl font-bold">Animation</h3>
+                <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odio velit
+                    aspernatur a dicta quasi neque rerum iusto iste sapiente nemo cumque, temporibus rem est possimus
+                    voluptas! Dolorum, quas illo?</p>
+
+            </div>
+            <div class="card p-4 flex gap-5 flex-col">
+                <i class="h-12 w-12 rounded-full bg-sky-300"></i>
+                <h3 class="text-2xl font-bold">marketing</h3>
+                <p class="text-base">Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt odio velit
+                    aspernatur a dicta quasi neque rerum iusto iste sapiente nemo cumque, temporibus rem est possimus
+                    voluptas! Dolorum, quas illo?</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="recent-cli lg:m-20 m-10">
+        <div class="cli-head">
+            <h2 class="lg:text-6xl text-2xl text-center font-bold">Recent clients's <br> work of our agency</h2>
+        </div>
+
+        <div class="cli-cards grid lg:grid-cols-2 grid-cols-1 my-10 gap-10">
+            <div class="cli-card overflow-hidden rounded-tr-[40%] rounded-bl-[40%]">
+                <img src="../digigen/src/pexels-fauxels-3182812.jpg" alt="">
+            </div>
+            <div class="cli-card flex justify-center items-center">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 p-4">
+                    <h3 class="lg:text-2xl text-xl font-bold">Web & Development</h3>
+                    <p class="text-base mt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae atque
+                        eligendi odio? Corrupti molestias repellat necessitatibus assumenda placeat tempore doloremque.
+                        Quisquam culpa praesentium reiciendis perspiciatis qui doloribus eaque nesciunt magni.</p>
+                    <h4 class="text-lg font-bold mt-10"><u>Full case study</u></h4>
+                </div>
+            </div>
+            <div class="cli-card flex justify-center items-center">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 p-4">
+                    <h3 class="text-2xl font-bold">Logo & Branding</h3>
+                    <p class="text-base mt-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae atque
+                        eligendi odio? Corrupti molestias repellat necessitatibus assumenda placeat tempore doloremque.
+                        Quisquam culpa praesentium reiciendis perspiciatis qui doloribus eaque nesciunt magni.</p>
+                    <h4 class="text-lg font-bold mt-10"><u>Full case study</u></h4>
+                </div>
+            </div>
+            <div class="cli-card overflow-hidden rounded-tr-[40%] rounded-bl-[40%]">
+                <img src="../digigen/src/pexels-fauxels-3182812.jpg" alt="">
+            </div>
+        </div>
+    </section>
+
+    <section class="lander bg-sky-100">
+        <div class="grid lg:grid-cols-2 grid-cols-1 p-12 gap-5 overflow-hidden">
+            <div class="overflow-hidden bg-sky-900"></div>
+            <div class="py-4 flex flex-col gap-8 relative ">
+                <div class="bg-pink-200 h-24 w-24 lg:h-48 lg:w-48 lg:-right-32 top-0 -right-24 rounded-full absolute"></div>
+                <h3 class="lg:text-4xl text-4xl font-bold">Enhanced <br> your startup <br> journey with us.</h3>
+                <p class="lg:text-base lg:w-2/3 text-sm font-semibold">Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti quae voluptatum
+                    illo totam consequatur voluptatem sapiente tenetur earum nesciunt accusamus.</p>
+                <div class="land-btn flex gap-8">
+                    <button class="px-4 py-2 border-2 border-black rounded-full font-bold text-base">Get started</button>
+                    <button class="font-bold text-base">Learn More</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="testi lg:m-20 m-10">
+        <h2 class="lg:text-6xl text-2xl font-bold my-10">What clients says</h2>
+        <div class="scroll-container lg:p-8 p-1">
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+            <div class="scroll-card lg:h-[300px] h-[200px] lg:w-1/2 w-full bg-sky-300 rounded-xl"></div>
+
+        </div>
+    </section>
+
+    <section class="footer lg:mt-20 mt-10 ">
+        <div class="footercon flex flex-col gap-10 justify-center text-center bg-black rounded-t-[20%] p-12">
+            <div class="footer-sub-head">
+                <h4 class="lg:text-xl text-lg font-bold text-slate-100">Let's work combinedly</h4>
+            </div>
+            <div class="gmail">
+                <h1 class="lg:text-6xl text-2xl font-bold text-sky-200">JohnDoe@gmail.com</h1>
+            </div>
+            <div class="copy">
+                <p class="text-gray-500 lg:text-base text-sm">&copy; <span class="year"></span>. All rights reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        var yearhold = document.querySelector('.year');
+        var yearnow = new Date().getFullYear();
+        yearhold.textContent = yearnow;
+    </script>
+</body>
+
+</html>

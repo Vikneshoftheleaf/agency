@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="../output.css">
+    <style>
+        .mobile-nav{
+            position: fixed;
+            top: 0;
+            right: -150%;
+            transition: 0.5s ease-in-out;
+            
+        }
+    </style>
+</head>
+
+<body class="bg-black text-slate-100">
+
+    <div class="goBack fixed bottom-5 right-5 z-10">
+        <a href="/projects" class="lg:text-lg font-base font-bold px-4 py-2 bg-slate-900 text-slate-100 rounded-full">Go To Projects</a>
+    </div>
+
+    <div class="mobile-nav h-screen w-screen bg-black py-8 px-4 text-slate-200 lg:hidden z-10">
+
+        <div class="mob-contenet flex flex-col w-full ">
+
+            <div class="mob-nav-head flex items-center justify-between ">
+                <h1 class="text-3xl font-bold">Logo</h1>
+                <button class="closemenu bg-black px-4 py-2 rounded-full font-bold text-xl">Close</button>
+            </div>
+
+            <div class="mob-links mt-10 flex flex-col gap-4">
+                <a href="" class="text-4xl font-bold text-slate-200 hover:text-emerald-500 transition ease-in-out duration-500">About</a>
+                <a href="" class="text-4xl font-bold text-slate-200 hover:text-emerald-500 transition ease-in-out duration-500">Service</a>
+                <a href="" class="text-4xl font-bold text-slate-200 hover:text-emerald-500 transition ease-in-out duration-500">Skill</a>
+                <a href="" class="text-4xl font-bold text-slate-200 hover:text-emerald-500 transition ease-in-out duration-500">Featured Projects</a>
+                <a href="" class="text-4xl font-bold text-slate-200 hover:text-emerald-500 transition ease-in-out duration-500">Education</a>
+            </div>
+
+            <div class="mt-10 flex w-full">
+                <a href="" class="w-full bg-emerald-500 px-8 py-4 font-semibold text-slate-100 text-center rounded-full text-2xl">Contact Us</a>
+            </div>
+        </div>
+        
+    </div>
+
+    <button class="openmenu p-4 bg-gray-700 absolute top-4 right-5 lg:hidden rounded-full ">Menu</button>
+
+    <section class="card-scroll bg-black text-slate-100 ">
+        <div class="lg:grid lg:h-screen grid-cols-4 gap-5 ">
+
+            <div class="card lg:col-span-1 lg:h-full p-2 lg:block hidden">
+
+                <div class="card-content  p-8 border-gray-500 border-2 rounded-xl flex flex-col gap-6">
+
+                    <div class="card-head flex justify-between items-center gap-8  ">
+                        <h3 class="text-3xl font-bold">Justin</h3>
+                        <h4 class="text-xs text-right">Framer Developer & Designser</h4>
+                    </div>
+
+                    <div class="card-img rounded-xl h-1/4">
+                        <img src="../uxlancer/src/artist-white.jpg" alt="" class="object-cover rounded-xl">
+                    </div>
+
+                    <div class="card-body flex text-center flex-col gap-2">
+                        <h2 class="text-base font-bold">hello@gmail.com</h2>
+                        <h3 class="text-sm font-semibold">base in Los Angeles, CA</h3>
+                        <p class="text-sm text-gray-500 mt-6">&copy;<span class="year"></span> Justin. All rights
+                            reserved</p>
+                    </div>
+
+                    <div class="cta-card">
+                        <button class="bg-emerald-500 py-2 px-4 w-full rounded-full font-bol text-base">Hire Me</button>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="scroll lg:col-span-3 lg:h-full lg:overflow-y-scroll">
+
+                <div class="intro m-10">
+
+                    <div class="pill inline-block mb-10">
+                        <h2 class="text-xs border border-gray-500 rounded-full py-1 px-2">INTRODUCTION</h2>
+                    </div>
+                    <h1 class="lg:text-5xl text-5xl tracking-wide font-bold mb-10 lg:w-2/3">
+                        Say Hi from <span class="text-emerald-500">Drake</span>,
+                        Framer Designer and 
+                        Developer
+                    </h1>
+
+                    <p class="text-sm text-gray-500 mb-10">Lorem ipsum dolor sit amet consectetur, adipisicing elit
+                        Dolore aliquam possimus natus <br> pariatur iure unde consequuntur minima officiis! Quos, rerum!
+                    </p>
+
+                    <div class="stat flex gap-10 mb-32">
+                        <div class="entry flex flex-col gap-2">
+                            <h2 class="text-5xl font-bold text-emerald-500">10+</h2>
+                            <p class="text-gray-500 text-xs">YEARS OF <br> EXPERIENCE</p>
+                        </div>
+                        <div class="entry flex flex-col gap-2">
+                            <h2 class="text-5xl font-bold text-emerald-500">182+</h2>
+                            <p class="text-gray-500 text-xs">PROJECTS COMPLETED ON <br> 15 COUNTRIES</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about m-10">
+                    <div class="pill inline-block mb-10">
+                        <h2 class="text-xs border border-gray-500 rounded-full py-1 px-2">ABOUT</h2>
+                    </div>
+                    <div class="abt-head mb-32">
+                        <h2 class="text-3xl font-bold mb-5">
+                            Every great design begins with <br> an even <span class="text-emerald-500">better
+                                story</span>
+                        </h2>
+                        <p class="text-sm text-gray-500 lg:w-1/2">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                            Necessitatibus, optio totam. Natus tempora praesentium odit deserunt nam sequi, quibusdam
+                            inventore placeat! Iste accusamus animi magni vero. Eaque eligendi repellendus enim,
+                            voluptas impedit maxime totam quasi nostrum fugit voluptatem molestias id, quod tempora.
+                            Aliquid nisi libero doloribus porro ipsa autem ea.</p>
+                    </div>
+                </div>
+
+                <div class="resume m-10">
+                    <div class="pill inline-block mb-10">
+                        <h2 class="text-xs border border-gray-500 rounded-full py-1 px-2 ">RESUME</h2>
+                    </div>
+
+                    <div class="resume-head mb-10">
+                        <h3 class="text-3xl font-bold">Education & <span class="text-emerald-500">Experience</span></h3>
+                    </div>
+
+                    <div class="journey relative flex gap-5">
+                        <div class="points flex flex-col justify-center items-center">
+                            <div class="ball h-4 w-4 rounded-full bg-emerald-500"></div>
+                            <div class="h-full bg-gray-500 w-1"></div>
+                        </div>
+                        <div class="all-dates flex flex-col gap-5 mb-20">
+                            <div class="dates flex flex-col gap-2">
+                                <h4 class="text-base text-emerald-500">2020 - Present</h4>
+                                <h3 class="text-2xl font-bold">Framer Designer & Developer <br> <span
+                                        class="text-sm text-gray-500">Brundee Agency</span></h3>
+                            </div>
+                            <div class="dates flex flex-col gap-5">
+                                <h3 class="text-2xl font-bold">Front-End Wordpress Developer <br> <span
+                                        class="text-sm text-gray-500">Envato Market</span></h3>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                    <div class="journey relative flex gap-5">
+                        <div class="points flex flex-col justify-center items-center">
+                            <div class="ball h-4 w-4 rounded-full bg-emerald-500"></div>
+                            <div class="h-full bg-gray-500 w-1"></div>
+                        </div>
+                        <div class="all-dates flex flex-col gap-5 mb-20">
+                            <div class="dates flex flex-col gap-2">
+                                <h4 class="text-base text-emerald-500">2013 - 2019</h4>
+                                <h3 class="text-2xl font-bold">Webflow Developer & Co-Founder <br> <span
+                                        class="text-sm text-gray-500">Designing Studio</span></h3>
+                            </div>
+                            <div class="dates flex flex-col gap-5">
+                                <h3 class="text-2xl font-bold">Web Designer<br> <span
+                                        class="text-sm text-gray-500">Freelancer</span></h3>
+                            </div>
+                            <div class="dates flex flex-col gap-5">
+                                <h3 class="text-2xl font-bold">Leader Team of Marketing <br> <span
+                                        class="text-sm text-gray-500">AMA Marketing Agency</span></h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="journey relative flex gap-5 mb-32">
+                        <div class="points flex flex-col justify-center items-center">
+                            <div class="ball h-4 w-4 rounded-full bg-emerald-500"></div>
+                            <div class="h-full bg-gray-500 w-1"></div>
+                        </div>
+                        <div class="all-dates flex flex-col gap-5">
+                            <div class="dates flex flex-col gap-2">
+                                <h4 class="text-base text-emerald-500">2020 - 2013</h4>
+                                <h3 class="text-2xl font-bold">Bachelor Degree of information Technology <br> <span
+                                        class="text-sm text-gray-500">US RMIT University</span></h3>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+                <div class="service m-10 mb-32">
+                    <div class="pill inline-block mb-10">
+                        <h2 class="text-xs border border-gray-500 rounded-full py-1 px-2 ">SERVICE</h2>
+                    </div>
+                    <div class="serve-head">
+                        <h3 class="text-3xl font-bold">My <span class="text-emerald-500">Specialization</span></h3>
+                    </div>
+                    <div class="serve-body mt-10 mb-22 mx-4 flex flex-col gap-4">
+                        <div class="lg:px-16 lg:py-8 p-6 border-2 cursor-pointer hover:border-emerald-500 rounded-2xl">
+                            <h4 class="text-xl font-bold hover:text-emerald-500">Website Degsign</h4>
+                            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Nisi, corporis.</p>
+                            <P class="mt-10"><u>24 PROJECTS</u></P>
+                        </div>
+                        <div class="lg:px-16 lg:py-8 p-6 border-2 cursor-pointer hover:border-emerald-500 rounded-2xl">
+                            <h4 class="text-xl font-bold hover:text-emerald-500">Developement</h4>
+                            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Nisi, corporis.</p>
+                            <P class="mt-10"><u>128 PROJECTS</u></P>
+                        </div>
+                        <div class="lg:px-16 lg:py-8 p-6 border-2 cursor-pointer hover:border-emerald-500 rounded-2xl">
+                            <h4 class="text-xl font-bold hover:text-emerald-500">SEO/Marketing</h4>
+                            <p class="text-sm text-gray-500">Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                                Nisi, corporis.</p>
+                            <P class="mt-10"><u>8 PROJECTS</u></P>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="advantage m-10 mb-32">
+                    <div class="pill inline-block mb-10">
+                        <h2 class="text-xs border border-gray-500 rounded-full py-1 px-2 ">MY SKILLS</h2>
+                    </div>
+                    <h2 class="text-3xl font-bold">My <span class="text-emerald-500">Advantages</span></h2>
+                    <div class="showcase grid lg:grid-cols-4 grid-cols-2 gap-4 mx-4 mt-10 mb-32">
+
+                        <div class="case-cards p-2 flex justify-center items-center flex-col">
+                            <div class="case-card-con border border-emerald-500 rounded-full p-4">
+                                <h4 class="text-3xl font-bold">92%</h4>
+                            </div>
+                            <p class="text-sm mt-2">Figma</p>
+                        </div>
+                        <div class="case-cards p-2 flex justify-center items-center flex-col">
+                            <div class="case-card-con border border-emerald-500 rounded-full p-4">
+                                <h4 class="text-3xl font-bold">85%</h4>
+                            </div>
+                            <p class="text-sm mt-2">Framer</p>
+                        </div>
+                        <div class="case-cards p-2 flex justify-center items-center flex-col">
+                            <div class="case-card-con border border-emerald-500 rounded-full p-4">
+                                <h4 class="text-3xl font-bold">80%</h4>
+                            </div>
+                            <p class="text-sm mt-2">Webflow</p>
+                        </div>
+                        <div class="case-cards p-2 flex justify-center items-center flex-col">
+                            <div class="case-card-con border border-emerald-500 rounded-full p-4">
+                                <h4 class="text-3xl font-bold">90%</h4>
+                            </div>
+                            <p class="text-sm mt-2">React</p>
+                        </div>
+                        <div class="case-cards p-2 flex justify-center items-center flex-col">
+                            <div class="case-card-con border border-emerald-500 rounded-full p-4">
+                                <h4 class="text-3xl font-bold">86%</h4>
+                            </div>
+                            <p class="text-sm mt-2">Wordpress</p>
+                        </div>
+                        <div class="case-cards p-2 flex justify-center items-center flex-col">
+                            <div class="case-card-con border border-emerald-500 rounded-full p-4">
+                                <h4 class="text-3xl font-bold">70%</h4>
+                            </div>
+                            <p class="text-sm mt-2">Laraval/PHP</p>
+                        </div>
+
+                    </div>
+                </div>
+
+               
+                <div class="con-form m-10">
+                    <div class="pill inline-block mb-10">
+                        <h2 class="text-xs border border-gray-500 rounded-full py-1 px-2 ">CONTACT</h2>
+                    </div>
+                    <h2 class="text-3xl font-bold">Lets's Work <span class="text-emerald-500">Together!</span></h2>
+                    <div class="grid grid-cols-2 gap-8 mt-20">
+                        <div class="">
+                            <label for="" class="text-md font-semibold">FULL NAME</label>
+                            <br>
+                            <input type="text" class="bg-transparent border-b-2 w-full focus:outline-none p-2">
+                        </div>
+                        <div class="">
+                            <label for="" class="text-md font-semibold">EMAIL</label>
+                            <br>
+                            <input type="email" class="bg-transparent border-b-2 w-full focus:outline-none p-2">
+                        </div>
+                        <div class="">
+                            <label for="" class="text-md font-semibold">PHONE NO</label>
+                            <br>
+                            <input type="number" class="bg-transparent border-b-2 w-full focus:outline-none p-2">
+                        </div>
+                        <div class="">
+                            <label for="" class="text-md font-semibold">SUBJECT</label>
+                            <br>
+                            <select name="servicename" id="" class="bg-transparent border-b-2 w-full focus:outline-none p-2">
+                                <option value="1" class="bg-transparent">WEB DESIGN</option>
+                                <option value="2" class="bg-transparent">WEB REDESIGN</option>
+                                <option value="3" class="bg-transparent">WEB DEVELOPMENT</option>
+                            </select>
+                        </div>
+                        <div class="col-span-2">
+                            <label for="" class="text-md font-semibold">Budget <span class="text-gray-550">(optional)</span></label>
+                            <br>
+                            <input type="text" class="bg-transparent border-b-2 w-full focus:outline-none p-2">
+                        </div>
+                        <div class="col-span-2">
+                            <label for="" class="text-md font-semibold">Message</label>
+                            <br>
+                            <textarea name="" id="" cols="30" rows="10" class="border-2 rounded-xl p-2 bg-transparent w-full resize-none mt-5 focus:outline-none p-2"></textarea>
+                        </div>
+
+                    </div>
+                    <button class="bg-emerald-500 py-3 px-4 text-slate-100 font-bold rounded-full mt-10">SEND MESSAGE</button>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+        var menuopen = document.querySelector('.openmenu');
+        var menuclose = document.querySelector('.closemenu');
+        menuopen.addEventListener("click", ()=>{
+            var mobilenav = document.querySelector('.mobile-nav');
+            mobilenav.style.right = '0%';
+        })
+        menuclose.addEventListener("click", ()=>{
+            var mobilenav = document.querySelector('.mobile-nav');
+            mobilenav.style.right = '-150%';
+        })
+    </script>
+</body>
+
+</html>

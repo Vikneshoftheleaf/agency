@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title>Chillfeast | Website Development Agency</title>
+    <link rel="stylesheet" href="/output.css">
+    <script src="https://kit.fontawesome.com/067fc88846.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" href="./src/fav.png" type="image/x-icon">
+    <link rel="shortcut icon" href="fav.png" type="image/x-icon">
+    <style>
+        * {
+            scroll-behavior: smooth;
+        }
+
+        .mobile-nav {
+            right: -150%;
+            transition: 0.5s;
+        }
+
+        .scroller {
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+            white-space: nowrap;
+            scroll-behavior: smooth;
+        }
+
+        .t-card {
+            display: inline-block;
+            scroll-snap-align: start;
+            margin-right: 1rem;
+        }
+    </style>
+
+</head>
+
+<body class="bg-slate-900 text-slate-100 m-0 p-0">
+    <div id="top"></div>
+    <div class="to-top fixed bottom-5 right-5 bg-slate-700 backdrop-blur-sm p-4 rounded-full">
+        <a href="#top" class="text-slate-100 font-bold">Top</a>
+    </div>
+
+    <div class="mobile-nav h-screen w-screen fixed top-0 bg-indigo-900 py-8 px-4 text-slate-200 lg:hidden z-10">
+
+        <div class="mob-contenet flex flex-col w-full ">
+
+            <div class="mob-nav-head flex items-center justify-between  mt-2">
+                <a href="./index.html" class="lg:text-3xl text-base font-bold">
+                    <img src="./src/logo.png" alt="" class="object-cover lg:h-12 h-8">
+                </a>
+                <button class="closemenu text-4xl"><i class="fa-solid fa-circle-xmark"></i></button>
+            </div>
+
+            <div class="mob-links mt-10 flex flex-col items-start gap-4">
+                <button class="m-home text-4xl font-bold text-slate-200 hover:text-slate-100 transition ease-in-out duration-500" onclick="navto('/')">Home</button>
+                <button class="m-service text-4xl font-bold text-slate-200 hover:text-slate-100 transition ease-in-out duration-500" onclick="navto('/#offer')">Service</button>
+                <button class="m-price text-4xl font-bold text-slate-200 hover:text-slate-100 transition ease-in-out duration-500" onclick="navto('/#price')">Pricing</button>
+                <button class="m-abt text-4xl font-bold text-slate-200 hover:text-slate-100 transition ease-in-out duration-500" onclick="navto('/about')">About Us</button>
+                <button class="m-work text-4xl font-bold text-slate-200 hover:text-slate-100 transition ease-in-out duration-500" onclick="navto('/#works')">Our Work</button>
+            </div>
+            <div class="mt-10 flex w-full">
+                <a href=""
+                    class="w-full bg-black px-8 py-4 font-semibold text-slate-100 text-center rounded-full text-2xl">Contact
+                    Us</a>
+            </div>
+        </div>
+
+    </div>
+
+    <section class="nav lg:mx-20 mx-5 m-10">
+        <div class="navbar flex justify-between items-center">
+            <div class="logo">
+                <a href="./index.html" class="lg:text-3xl text-base font-bold">
+                    <img src="logo.png" alt="" class="object-cover lg:h-12 h-8">
+                </a>
+            </div>
+            <div class="navlinks rounded-full bg-slate-500 lg:flex items-center justify-center hidden">
+                <a href="/"
+                    class="px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-100 hover:text-slate-900 transition ease-in-out duration-500 ">Home</a>
+                <a href="#offer"
+                    class="px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-100 hover:text-slate-900 transition ease-in-out duration-500 ">Services</a>
+                <a href="#price"
+                    class="px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-100 hover:text-slate-900 transition ease-in-out duration-500 ">Pricing</a>
+                <a href="/about"
+                    class="px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-100 hover:text-slate-900 transition ease-in-out duration-500 ">About
+                    Us</a>
+                <a href="#works"
+                    class="px-8 py-4 rounded-full text-sm font-semibold hover:bg-slate-100 hover:text-slate-900 transition ease-in-out duration-500 ">Our
+                    Work</a>
+            </div>
+            <div class="nav-cta lg:block hidden">
+                <a href=""
+                    class="px-8 py-4 bg-slate-500 rounded-full text-sm font-semibold hover:bg-indigo-500 hover:text-slate-100 transition ease-in-out duration-500 ">Contact
+                    Us</a>
+            </div>
+            <button class="openmenu lg:hidden bg-slate-600 rounded-full px-4 py-2"><i
+                    class="fa-solid fa-bars-staggered"></i></button>
+        </div>
+    </section>
+
+    <section class="banner lg:m-20 m-10 my-20 relative">
+        <div class="div-ban-text text-center flex flex-col justify-center gap-8 lg:py-16 mb-28 z-1">
+
+            <h1 class="lg:text-7xl text-6xl font-black lg:w-2/3 m-auto">BUILDING BUSINESS SUCCESS STORIES</h1>
+
+            <!--<h1 class="lg:text-7xl text-4xl w-[90%] font-black lg:w-2/3 m-auto">WE <i>DESIGN </i> FOR HUMAN, <u>NOT</u>
+                        <i>ALIEN</i></h1>-->
+            <p class="text-slate-400 text-base lg:w-1/2 m-auto">We are Buildig the Bridge between the Business and
+                Technology and building your online presence.</p>
+            <a href="" class="text-base px-8 py-4 bg-indigo-500 lg:w-1/4 m-auto rounded-full font-bold">Start New
+                Project <i class="fa-solid fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <section id="offer" class="service lg:m-20 m-5">
+        <div class="serve-head lg:text-6xl text-2xl font-bold relative overflow-hidden">
+            <h2 class="">What Type of <br> Services We Offer</h2>
+            <div
+                class="lg:h-[200px] lg:w-[200px] h-32 w-32 bg-pink-300 rounded-full absolute lg:right-0 -right-10 top-10">
+            </div>
+        </div>
+
+        <div
+            class="serve-body grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 rounded-xl mt-10 lg:p-8 p-4 gap-5 bg-slate-800">
+
+            <div class="card p-4 flex gap-2 flex-col justify-between">
+                <div class="flex flex-col gap-3">
+                    <div class="h-12 w-12 rounded-full bg-yellow-300 text-slate-900 flex justify-center items-center">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h3 class="lg:text-2xl text-xl font-bold">Web Design</h3>
+                    <p class="text-base">Transforming Ideas into Stunning Online Experiences
+                        Unlock the true potential of your brand with our exceptional web design services. Our expert
+                        team of
+                        designers combines creativity with user-centric design principles to create visually captivating
+                        websites that engage and inspire your audience. From concept to execution, we craft seamless and
+                        intuitive designs that leave a lasting impression. Let us bring your vision to life and make
+                        your
+                        online presence shine.</p>
+
+                </div>
+
+                <a href="" class="bg-indigo-500 font-bold text-base px-4 py-2 inline text-center rounded-md w-auto">Get
+                    Details</a>
+
+            </div>
+
+            <div class="card p-4 flex gap-5 flex-col justify-between">
+                <div class="flex flex-col gap-3">
+                    <div class="h-12 w-12 rounded-full bg-pink-300 text-slate-900 flex justify-center items-center"><i
+                            class="fa-solid fa-window-restore"></i></div>
+                    <h3 class="lg:text-2xl text-xl font-bold">Web Development</h3>
+                    <p class="text-base">Building Powerful and Scalable Web Solutions
+                        Welcome to a world of limitless possibilities. Our web development team is dedicated to crafting
+                        robust and scalable websites that not only meet your current needs but also adapt to your future
+                        aspirations. With extensive expertise in cutting-edge technologies, we deliver tailor-made
+                        solutions
+                        that align with your business goals. From front-end development to complex backend integrations,
+                        we
+                        have the skills to bring your website to life and ensure it stands out in the digital realm.</p>
+
+                </div>
+
+
+                <a href="" class="bg-indigo-500 font-bold text-base px-4 py-2 inline text-center rounded-md w-auto">Get
+                    Details</a>
+
+            </div>
+
+            <div class="card p-4 flex gap-5 flex-col justify-between">
+                <div class="flex flex-col gap-3">
+                    <div class="h-12 w-12 rounded-full bg-sky-300 text-slate-900 flex justify-center items-center"><i
+                            class="fa-solid fa-pen-ruler"></i></div>
+                    <h3 class="lg:text-2xl text-xl font-bold">UX Audit</h3>
+                    <p class="text-base">Enhance User Experience, Maximize Engagement
+                        Don't let a subpar user experience hold you back. Our UX audit services offer a fresh
+                        perspective on
+                        your digital platform, identifying areas for improvement and optimization. Our meticulous
+                        analysis
+                        uncovers usability issues, navigational challenges, and conversion bottlenecks, providing
+                        actionable
+                        insights to enhance user engagement and drive conversions. By fine-tuning the user experience,
+                        we
+                        empower your website to deliver seamless interactions, leaving a lasting impression on your
+                        visitors
+                        and driving your business forward.</p>
+                </div>
+
+                <a href="" class="bg-indigo-500 font-bold text-base px-4 py-2 inline text-center rounded-md w-auto">Get
+                    Details</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="recent-cli lg:m-20 m-10 lg:block hidden">
+        <div class="cli-head lg:mb-20">
+            <h2 class="lg:text-6xl text-2xl text-center font-bold">Benefits of <br> having a Website.</h2>
+        </div>
+
+        <div class="cli-cards grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 my-10 gap-10">
+
+            <div class="cli-card overflow-hidden rounded-xl bg-indigo-500 ">
+                <img src="/9019105.jpg" alt="" class="object-cover">
+            </div>
+
+            <div class="cli-card flex justify-center ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Reach a Wider Audience</h3>
+                    <p class="text-base mt-6">A website opens the door to a global marketplace, allowing you to reach
+                        customers beyond the limitations of physical location. With a well-designed website, your
+                        business can expand its reach and tap into new markets, connecting with potential customers from
+                        around the world.</p>
+                </div>
+            </div>
+
+            <div class="cli-card flex justify-center ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Establish Credibility and Trust</h3>
+                    <p class="text-base mt-6">In today's digital age, a professional website is a hallmark of a credible
+                        and trustworthy business. It serves as a virtual storefront, showcasing your brand's expertise,
+                        achievements, and testimonials. By having a polished online presence, you instill confidence in
+                        your audience, making it easier to build strong relationships and convert visitors into loyal
+                        customers.</p>
+                </div>
+            </div>
+
+            <div class="cli-card overflow-hidden rounded-xl bg-yellow-300">
+                <img src="/Handshake gesture 3d cartoon style icon.jpg" alt="">
+            </div>
+
+            <div class="cli-card overflow-hidden rounded-xl bg-pink-500 ">
+                <img src="/m024t0225_a_online_shopping_09sep22.jpg" alt="">
+            </div>
+
+            <div class="cli-card flex justify-center ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Showcase Your Products or Services.</h3>
+                    <p class="text-base mt-6">A website provides an ideal platform to showcase your offerings in a
+                        visually appealing and informative manner. Whether you're selling products, offering services,
+                        or promoting your expertise, a well-structured website enables you to highlight your unique
+                        value proposition, making it easier for potential customers to understand what sets you apart
+                        from the competition..</p>
+                </div>
+            </div>
+
+            <div class="cli-card flex justify-center ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Increase Customer Engagement:</h3>
+                    <p class="text-base mt-6">Your website acts as a 24/7 sales and support representative, offering
+                        valuable information, answering FAQs, and guiding visitors through the customer journey. With
+                        interactive features like contact forms, live chat, or appointment scheduling, you can engage
+                        with your audience in real-time, providing personalized assistance and nurturing leads to drive
+                        conversions.</p>
+                </div>
+            </div>
+
+            <div class="cli-card overflow-hidden rounded-xl  bg-sky-300">
+                <img src="/22.jpg" alt="">
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="recent-cli lg:m-20 m-10 lg:hidden block">
+        <div class="cli-head lg:mb-20">
+            <h2 class="lg:text-6xl text-2xl text-center font-bold">Benefits of <br> having a Website.</h2>
+        </div>
+
+        <div class="cli-cards grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 my-10 gap-4">
+
+            <div class="cli-card overflow-hidden rounded-xl bg-indigo-500 ">
+                <img src="/9019105.jpg" alt="" class="object-cover">
+            </div>
+
+            <div class="cli-card flex justify-start ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Reach a Wider Audience</h3>
+                    <p class="text-base mt-6">A website opens the door to a global marketplace, allowing you to reach
+                        customers beyond the limitations of physical location. With a well-designed website, your
+                        business can expand its reach and tap into new markets, connecting with potential customers from
+                        around the world.</p>
+                </div>
+            </div>
+
+            <div class="cli-card overflow-hidden rounded-xl bg-yellow-300">
+                <img src="/Handshake gesture 3d cartoon style icon.jpg" alt="">
+            </div>
+
+            <div class="cli-card flex justify-start ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Establish Credibility and Trust</h3>
+                    <p class="text-base mt-6">In today's digital age, a professional website is a hallmark of a credible
+                        and trustworthy business. It serves as a virtual storefront, showcasing your brand's expertise,
+                        achievements, and testimonials. By having a polished online presence, you instill confidence in
+                        your audience, making it easier to build strong relationships and convert visitors into loyal
+                        customers.</p>
+                </div>
+            </div>
+
+            <div class="cli-card overflow-hidden rounded-xl bg-pink-500 h-full">
+                <img src="/m024t0225_a_online_shopping_09sep22.jpg" alt="">
+            </div>
+
+            <div class="cli-card flex justify-start ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Showcase Your Products or Services.</h3>
+                    <p class="text-base mt-6">A website provides an ideal platform to showcase your offerings in a
+                        visually appealing and informative manner. Whether you're selling products, offering services,
+                        or promoting your expertise, a well-structured website enables you to highlight your unique
+                        value proposition, making it easier for potential customers to understand what sets you apart
+                        from the competition..</p>
+                </div>
+            </div>
+
+            <div class="cli-card overflow-hidden rounded-xl h-full bg-sky-300">
+                <img src="/22.jpg" alt="">
+            </div>
+
+            <div class="cli-card flex justify-start ">
+                <div class="cli-card-con lg:w-2/3 lg:h-2/3 px-4 py-8">
+                    <h3 class="lg:text-2xl text-xl font-bold">Increase Customer Engagement:</h3>
+                    <p class="text-base mt-6">Your website acts as a 24/7 sales and support representative, offering
+                        valuable information, answering FAQs, and guiding visitors through the customer journey. With
+                        interactive features like contact forms, live chat, or appointment scheduling, you can engage
+                        with your audience in real-time, providing personalized assistance and nurturing leads to drive
+                        conversions.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="price" class="pricing bg-slate-100 text-slate-900 py-2">
+        <div class="lg:mx-20 m-10">
+            <h1 class="lg:text-6xl text-4xl text-center font-bold mb-10">Pricing</h1>
+            <h1 class="lg:text-2xl text-2xl font-bold text-center lg:w-1/2 m-auto">While other Agencies Charge 1K-2K, We
+                only charge.</h1>
+            <div class="price-cards grid lg:grid-cols-3 md:grid-cols-3 grid-cols-1 lg:gap-1 gap-3 mt-10">
+                <div class="flex lg:justify-end lg:items-center">
+                    <div
+                        class="p-cards p-8  rounded-xl bg-white shadow-xl flex flex-col justify-between gap-3 lg:w-[70%] lg:h-[95%]">
+
+                        <div class="flex flex-col gap-2">
+                            <h4 class="p-c-head font-bold text-sm">Portfolio</h4>
+                            <div class="text-4xl font-bold">$150</div>
+                            <p class="text-sm">The best choice for your Personal and Professional Service.</p>
+                            <hr class="my-2">
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><i class="fa-solid fa-check text-green-500"></i> 1-5 Pages</li>
+                                <li><i class="fa-solid fa-check text-green-500"></i> Basic SEO</li>
+                                <li><i class="fa-solid fa-check text-green-500"></i> Static Pages</li>
+                                <li><i class="fa-solid fa-check text-green-500"></i> UX Friendly</li>
+                            </ul>
+                        </div>
+
+
+                        <button class="bg-slate-900 py-2 font-semibold text-base text-slate-100 rounded-lg -mt-2">Get
+                            Started</button>
+                    </div>
+
+                </div>
+
+                <div class="flex lg:justify-center">
+
+                    <div
+                        class="p-cards p-8 rounded-xl bg-slate-900 text-slate-100 shadow-xl flex flex-col justify-between gap-3 lg:w-[70%]">
+
+                        <div class="flex flex-col gap-2">
+                            <h4 class="p-c-head font-bold text-sm">Small Business</h4>
+                            <div class="text-4xl font-bold">$250</div>
+                            <p class="text-sm">The best choice for your Small Business, Online stores and Agency</p>
+                            <hr class="my-2">
+
+                        </div>
+
+                        <div>
+                            <ul>
+                                <li><i class="fa-solid fa-check text-green-500"></i> 5-10 Pages</li>
+                                <li><i class="fa-solid fa-check text-green-500"></i> Basic SEO</li>
+                                <li><i class="fa-solid fa-check text-green-500"></i> Dynamic Pages</li>
+                                <li><i class="fa-solid fa-check text-green-500"></i> UX Friendly</li>
+                            </ul>
+                        </div>
+
+
+                        <button class="bg-indigo-500 py-2 font-semibold text-base text-slate-100 rounded-lg">Get
+                            Started</button>
+                    </div>
+                </div>
+
+                <div class="flex lg:justify-start lg:items-center">
+                    <div
+                        class="p-cards p-8 rounded-xl bg-white shadow-xl flex flex-col gap-3 lg:w-[70%] lg:h-[95%] justify-between">
+
+                        <div class="flex flex-col gap-2">
+                            <h4 class="p-c-head font-bold text-sm">Enterprise</h4>
+                            <div class="text-4xl font-bold">Custom</div>
+                            <p class="text-sm">The best choice for your Personal and Professional Service.</p>
+                            <hr class="my-2">
+                        </div>
+
+                        <button class="bg-slate-900 py-2 font-semibold text-base text-slate-100 rounded-lg mt-12">Get
+                            Started</button>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+            <h1 class="lg:text-4xl text-xl font-bold text-left mt-10 ">Why these Prices?</h1>
+            <p class="text-base mt-2">
+                At our web development agency, we firmly believe in providing value that goes beyond mere cost. Our
+                tiered pricing structure has been carefully crafted to cater to the diverse needs of businesses at
+                different stages of growth. Let us explain why these prices are not only legitimate but also the best
+                investment you can make for your online presence.
+            <h1 id="price-port" class="my-2 font-bold text-base"> Portfolio Tier ($150):
+            </h1>
+            This tier is designed specifically for individuals and professionals looking to showcase their skills
+            and accomplishments. By offering our services at an affordable price, we empower talented individuals to
+            create a stunning online portfolio that captivates potential clients and stands out in a competitive
+            landscape. We understand the importance of launching your career or personal brand with a powerful
+            online presence, and our portfolio tier makes it accessible for everyone.
+
+            <h1 id="price-small" class="my-2 font-bold text-base"> Small Business Tier ($250):</h1>
+            For small businesses aiming to establish a strong online presence, our small business tier is the ideal
+            choice. Priced at $250, it offers exceptional value for your investment. We understand the unique
+            challenges faced by small businesses, and our team is dedicated to creating websites that are visually
+            engaging, user-friendly, and optimized for conversions. With our expertise in web design and
+            development, we ensure your small business website leaves a lasting impression on your target audience,
+            helping you attract and retain customers.
+
+            <h1 id="price-enterprise" class="my-2 font-bold text-base"> Enterprise Tier (Custom Pricing):</h1>
+
+            Enterprises demand robust, scalable, and highly customized solutions to meet their specific business
+            needs. Our enterprise tier is tailored to cater to these demands, and as such, pricing is provided on a
+            custom basis. By investing in our enterprise tier, you gain access to a team of experienced
+            professionals who will collaborate closely with your organization to deliver a tailor-made web solution
+            that aligns with your business objectives. We leverage cutting-edge technologies and industry best
+            practices to create a digital platform that drives growth and maximizes your ROI.
+            </p>
+        </div>
+    </section>
+
+    <section id="works" class="project bg-slate-100 text-slate-900">
+        <div class="lg:mx-20 -mt-10 m-10 py-20">
+            <h1 class="lg:text-6xl text-4xl text-center font-bold">Our Recent Works</h1>
+            <div class="grid lg:grid-cols-2 grid-cols-1 gap-6 mt-10">
+
+                <div class="overflow-hidden shadow-xl relative ">
+                    <img src="images/pimg1.png" alt="" class="rounded-xl">
+                    <a href="/project/3"
+                        class="bg-indigo-500 px-4 py-2 text-slate-100 font-semibold rounded-full absolute bottom-4 right-4 lg:text-base text-sm">View
+                        <i class="fa-solid fa-eye"></i></a>
+
+                </div>
+
+                <div class=" overflow-hidden shadow-xl relative">
+                    <img src="images/pimg3.png" alt="" class="rounded-xl">
+                    <a href="/project/1"
+                        class="bg-indigo-500 px-4 py-2 text-slate-100 font-semibold rounded-full absolute bottom-4 right-4 lg:text-base text-sm">View
+                        <i class="fa-solid fa-eye"></i></a>
+                </div>
+
+                <div class=" overflow-hidden shadow-xl relative">
+                    <img src="images/pimg4.png" alt="" class="rounded-xl">
+                    <a href="/project/2"
+                        class="bg-indigo-500 px-4 py-2 text-slate-100 font-semibold rounded-full absolute bottom-4 right-4 lg:text-base text-sm">View
+                        <i class="fa-solid fa-eye"></i></a>
+                </div>
+
+                <div class="overflow-hidden shadow-xl relative">
+                    <img src="images/oimg2.png" alt="" class="rounded-xl">
+                    <a href="/project/4"
+                        class="bg-indigo-500 px-4 py-2 text-slate-100 font-semibold rounded-full absolute bottom-4 right-4 lg:text-base text-sm">View
+                        <i class="fa-solid fa-eye"></i></a>
+
+                </div>
+
+                <div class="lg:col-span-2 col-span-1 flex shadow-t-2xl bg-slate-100 justify-center py-4">
+                    <a href="/projects"
+                        class="bg-indigo-500 px-8 py-2 text-slate-100 font-semibold rounded-full lg:text-xl text-sm">Load
+                        More</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <section id="reviews" class="testimonial mb-24">
+        <div class="lg:m-20 m-10">
+            <div class="lg:text-6xl text-4xl font-bold text-center">Testimonial</div>
+            <p class="text-sm text-gray-500 text-center mt-2">What our clients thinks about our service.</p>
+            <div class="flex justify-center items-center gap-4 relative">
+                <button
+                    class="sl bg-white/30 backdrop-blur-xl p-4 absolute z-1 top-[45%] lg:left-64 -left-5 h-12 w-12 flex justify-center items-center rounded-full"><i
+                        class="fa-solid fa-arrow-left"></i></button>
+                <button
+                    class="sr bg-white/30 backdrop-blur-xl p-4 absolute z-1 top-[45%] lg:right-64 -right-5 h-12 w-12 flex justify-center items-center rounded-full"><i
+                        class="fa-solid fa-arrow-right"></i></button>
+
+
+                <div class="scroller mt-5 lg:w-1/2 ">
+                    <div class="t-card bg-slate-700 text-slate-100 h-[200px] w-full rounded-md">
+                        <div class="h-full flex flex-col justify-between p-8 w-full flex-wrap">
+                            <h1 class="text-2xl font-bold">Great Experience </h1>
+                            <div class="flex justify-between items-center">
+                                <p class="text-sm text-slate-200">Stephen hill <br> Founder of HHerbels</p>
+                                <span class="text-lg text-yellow-300">
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star"></i>
+                                    <i class="fa-solid fa-star text-slate-100"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="t-card bg-slate-700 text-slate-100 h-[200px] w-full rounded-md">
+                        <div class="h-full flex flex-col justify-between p-8 w-full flex-wrap">
+                            <h1 class="text-2xl font-bold">Great Experience </h1>
+                            <p class="text-sm text-slate-200">Stephen hill <br> Founder of HHerbels</p>
+                        </div>
+                    </div>
+
+
+                    <div class="t-card bg-slate-700 text-slate-100 h-[200px] w-full rounded-md">
+                        <div class="h-full flex flex-col justify-between p-8 w-full flex-wrap">
+                            <h1 class="text-2xl font-bold">Great Experience </h1>
+                            <p class="text-sm text-slate-200">Stephen hill <br> Founder of HHerbels</p>
+                        </div>
+                    </div>
+
+                    <div class="t-card bg-slate-700 text-slate-100 h-[200px] w-full rounded-md">
+                        <div class="h-full flex flex-col justify-between p-8 w-full flex-wrap">
+                            <h1 class="text-2xl font-bold">Great Experience </h1>
+                            <p class="text-sm text-slate-200">Stephen hill <br> Founder of HHerbels</p>
+                        </div>
+                    </div>
+
+                    <div class="t-card bg-slate-700 text-slate-100 h-[200px] w-full rounded-md">
+                        <div class="h-full flex flex-col justify-between p-8 w-full flex-wrap">
+                            <h1 class="text-2xl font-bold">Great Experience </h1>
+                            <p class="text-sm text-slate-200">Stephen hill <br> Founder of HHerbels</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+    </section>
+
+    <section id="servicedetails" class="what-we-dont">
+        <div class="lg:m-20 m-10 ">
+            <h1 class="text-4xl font-bold">More About Our Service</h1>
+
+            <div
+                class="grid lg:grid-cols-11 grid-cols-1 gap-4 md:bg-slate-100 lg:bg-slate-100 rounded-xl lg:p-8 mt-5 text-slate-900">
+                <div class="col-span-5 crt bg-slate-100 rounded-xl p-8 lg:p-0">
+                    <h1 class="text-2xl font-bold mb-2 lg:text-left text-center">What We Do:</h1>
+                    <div class="flex items-top gap-2 ">
+                        <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                        <span>We create both Designs and website.</span>
+                    </div>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                        <span> If you want only Design we also don that as a Service.</span>
+                    </div>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                        <span>we can help you by giving information about the hosting and set them by yourself.</span>
+                    </div>
+                    <div class="flex items-top gap-2 ">
+                        <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                        <span>We also give consulting to your existing project.</span>
+                    </div>
+                    <div class="flex items-top gap-2 ">
+                        <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                        <span>We also helps you to redesign your project.</span>
+                    </div>
+                    <div class="flex items-top gap-2 ">
+                        <i class="fa-solid fa-check text-green-500 mt-1"></i>
+                        <span>We like to help the new entrpreneurs who want to build a online presence.</span>
+                    </div>
+
+                </div>
+
+
+                <div class="col-span-1 ln lg:flex hidden justify-center">
+                    <div class="h-full w-1 bg-gray-300"></div>
+                </div>
+
+
+                <div class="col-span-5 wrg bg-slate-100 rounded-xl p-8 lg:p-0">
+                    <h1 class="text-2xl font-bold mb-2 lg:text-left text-center">What We Don't:</h1>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
+                        <span>We don't host your Website we only create them.</span>
+                    </div>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
+                        <span>We don't buy you a dot com domain.</span>
+                    </div>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
+                        <span>We don't create a specific logo for your websites.</span>
+                    </div>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
+                        <span>We don't do pentrating testing.</span>
+                    </div>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
+                        <span>We don't do SEO research for you, But we give a base level of SEO.</span>
+                    </div>
+                    <div class="flex  items-top gap-2 ">
+                        <i class="fa-solid fa-xmark text-red-500 mt-1"></i>
+                        <span>We are not a marketing agency therfore we write copy based on your information.</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="footer bg-indigo-500">
+        <div
+            class="  py-14 lg:mx-20 lg:mt-20 mx-10 mt-10 footer-con grid lg:grid-cols-6 md:grid-cols-2  grid-cols-1 gap-8 text-indigo-100">
+
+            <div class="lg:col-span-2 flex flex-col gap-2">
+                <a href="/" class="lg:text-3xl text-base font-bold">
+                    <img src="logo.png" alt="" class="object-cover lg:h-12 h-8">
+                </a>
+                <p class="text-base font-semibold">We are Buildig the Bridge between the Business and Technology and
+                    building your online presence.</p>
+                <a href="mailto:chat.chillfeast@gmail.com?subject=We like to work with our Agency &body=We like to work with our Agency."
+                    class="bg-black px-4 py-2 text-slate-100 font-bold rounded-full lg:text-xl text-base text-center">Say
+                    Hello!</a>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold ">Quick Links</h2>
+                <ul class="mt-3 flex flex-col gap-1 font-semibold">
+                    <li><a href="/about">About</a></li>
+                    <li><a href="#price">Pricing</a></li>
+                    <li><a href="#offer">Our Service</a></li>
+                    <li><a href="#reviews">Testimonial</a></li>
+                    <li><a href="#servicedetails">More About Our Service</a></li>
+
+                </ul>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold">Pricing</h2>
+                <ul class="mt-3 flex flex-col gap-1 font-semibold">
+                    <li><a href="/#price-port">Portfolio</a></li>
+                    <li><a href="/#price-small">Small Business</a></li>
+                    <li><a href="/#price-enterprise">Enterprise</a></li>
+                </ul>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold">Projects</h2>
+                <ul class="mt-3 flex flex-col gap-1 font-semibold">
+                    <li><a href="/project/1">Digital Marketing Agency</a></li>
+                    <li><a href="/project/2">Graphic Designer</a></li>
+                    <li><a href="/project/4">Startup Agency</a></li>
+                    <li><a href="/project/3">Web Developer</a></li>
+                    <li><a href="/project/5">UX Designer</a></li>
+                    <li><a href="/projects">More</a></li>
+                </ul>
+            </div>
+
+            <div class="">
+                <h2 class="text-2xl font-bold">Contact</h2>
+                <ul class="mt-3 flex  gap-4 font-semibold">
+                    <li><a href="mailto:chat.chillfeast@gmail.com"><i class="fa-solid fa-envelope"></i></a> </li>
+                    <li><a href="https://twitter.com/chillfeast"><i class="fa-brands fa-twitter"></i></a> </li>
+                    <li><a href="https://instagram.com/chillfeast"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://facebook.com/profile.php?id=100093430748035"><i class="fa-brands fa-facebook"></i></a></li>
+                </ul>
+            </div>
+
+
+
+        </div>
+        <div class="flex lg:justify-between flex-wrap gap-10 p-8 justify-center text-indigo-100">
+            <div class="copy">
+                <h6 class="text-sm">&copy;<span id="year"></span> Chillfeast. All rights reserved.</h6>
+            </div>
+
+            <div class="alt-links flex gap-10 text-sm">
+                <a href="/terms">Terms & conditions</a>
+                <a href="/privacy">Privacy & policy</a>
+            </div>
+        </div>
+    </section>
+
+
+    <script>
+
+        var yearhold = document.getElementById("year");
+        var yearnow = new Date().getFullYear();
+        yearhold.textContent = yearnow;
+
+        var scrollleftbtn = document.querySelector('.sl');
+        var scrollrightbtn = document.querySelector('.sr');
+        var scrollcon = document.querySelector('.scroller')
+        scrollleftbtn.addEventListener("click", () => {
+            if (window.innerWidth < 400) {
+                scrollcon.scrollLeft -= 200;
+            }
+            else {
+                scrollcon.scrollLeft -= 500;
+            }
+        })
+        scrollrightbtn.addEventListener("click", () => {
+            var scrollcon = document.querySelector('.scroller');
+            if (window.innerWidth < 400) {
+                scrollcon.scrollLeft += 200;
+            }
+            else {
+                scrollcon.scrollLeft += 500;
+            }
+
+        })
+        var menuopen = document.querySelector('.openmenu');
+        var menuclose = document.querySelector('.closemenu');
+        menuopen.addEventListener("click", () => {
+            var mobilenav = document.querySelector('.mobile-nav');
+            mobilenav.style.right = '0%';
+        })
+        menuclose.addEventListener("click", () => {
+            var mobilenav = document.querySelector('.mobile-nav');
+            mobilenav.style.right = '-150%';
+        })
+
+        function navto(e)
+        {
+            var closeonclick = document.querySelector('.mobile-nav');
+            closeonclick.style.right = '-150%';
+            window.location.href = e;
+        }
+
+    </script>
+
+</body>
+
+</html>

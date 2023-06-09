@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/067fc88846.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/output.css">
+    <title>Viknesh | Portfolio</title>
+</head>
+
+<body class="bg-stone-800 text-slate-200 ">
+    <div class="goBack fixed bottom-5 right-5 z-10">
+
+        <a href="/projects" class="lg:text-lg font-base font-bold px-4 py-2 bg-slate-900 text-slate-100 rounded-full">Go To Projects</a>
+
+    </div>
+
+    <header>
+        <nav class="flex justify-between md:block px-8 py-4 items-center ">
+            <div class=" flex justify-between items-center backdrop-blur-sm ">
+                <div class="logo ">
+                    <a href=" ">
+                        <h1 class="text-4xl font-bold">Logo</h1>
+                    </a>
+                </div>
+
+                <div class="links hidden md:flex items-center gap-4 ">
+                    <a class="hover:text-purple-600 duration-100 ease-in-out " href="#abouts">About</a>
+                    <a class="hover:text-purple-600 duration-100 ease-in-out " href="#skills ">Skills</a>
+                    <a class="hover:text-purple-600 duration-100 ease-in-out " href="#projects ">Projects</a>
+                    <a class="rounded-full px-4 py-2 capitalize border-purple-500 border-2 text-slate-200 font-semibold hover:opacity-50 duration-100 ease-in-out" href="mailto:chat.chillfeast@gmail.com">Contact Me</a>
+                </div>
+
+            </div>
+            <div class="menu md:hidden z-30 ">
+                <i class="menuIcon fa-solid fa-bars " onclick="toggleMenu() "></i>
+            </div>
+        </nav>
+        <div class="moblinks hidden">
+            <div class="flex justify-center absolute top-0 right-0 z-10 w-screen backdrop-blur-2xl h-screen flex-col text-xl items-center gap-4 ">
+                <span id="about" class="hover:text-purple-600 duration-100 ease-in-out">About</span>
+                <span id="skill" class="hover:text-purple-600 duration-100 ease-in-out">Skills</span>
+                <span id="project" class="hover:text-purple-600 duration-100 ease-in-out">Projects</span>
+                <a class="rounded-lg px-4 py-2 capitalize border-purple-500 border-2 text-slate-200 font-semibold hover:opacity-50 duration-100 ease-in-out" href="mailto:chat.chillfeast@gmail.com">Contact Me</a>
+                <div class="chat flex gap-3">
+                    <a href="https://github.com/">
+                        <i class="fa-brands fa-github fa-xl lg:fa-2xl"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/">
+                        <i class="fa-brands fa-linkedin fa-xl lg:fa-2xl"></i>
+                    </a>
+
+                </div>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="heroBanner relative my-10 ">
+        <div class="circle h-40 w-40 bg-purple-500 blur-3xl rounded-full absolute -z-10 "></div>
+        <div class="flex flex-col md:flex-row text-center pt-8 md:pb-20 gap-4 ">
+            <div class=" md:w-1/2 text-center leading-loose ">
+                <h1 class="text-6xl font-extrabold lg:text-[110px] md:text-[68px] ">Hello I'm <br> Viknesh.</h1>
+                <p class="text-base md:text-[18px] mt-4 ">A Web Developer And Front-End Expert.</p>
+                <div class="buttons mt-4 flex justify-between gap-4 px-8 md:px-4 lg:px-12 ">
+                    <a class=" w-full px-4 py-2 border-2 border-purple-500 bg-purple-500 text-md " href="mailto:chat.viknesh@gmail.com">Contact Me</a>
+                    <a class=" w-full px-4 py-2 border-2 border-purple-500 text-md " href="">Download CV</a>
+                </div>
+            </div>
+            <div id="abouts" class=" md:w-1/2 leading-loose text-left p-5 ">
+                <h1 class="text-lg font-bold ">About</h1>
+                <p class="text-base text-justify mt-2 ">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vitae sit, hic illum tempora, autem labore veritatis unde a tempore veniam cumque harum quos corporis explicabo architecto. Ipsam assumenda excepturi aliquam suscipit tempora enim
+                    placeat eligendi, at cumque. Sequi, quos numquam. Eaque fugit fugiat qui itaque ab natus quia voluptas, laudantium nihil deserunt ad rem? Iusto quibusdam reiciendis quisquam minima, a quos dolor tenetur dolorum in suscipit itaque,
+                    beatae et minus! Modi molestiae non itaque quia iusto distinctio atque incidunt at, id ipsam, amet asperiores nostrum quo. Optio velit nesciunt molestiae eos fuga similique aliquam veniam, itaque sequi! Non, quisquam provident?</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills mt-10  ">
+        <div class="p-1 ">
+            <div class="text-center leading-relaxed p-2 ">
+                <h1 class="text-4xl font-semibold ">Tech I know</h1>
+                <p class="text-base mt-2">Here are the Techonlogoies and Programming langauge that I been Working with all of my Projects</p>
+            </div>
+
+            <div class="mx-10 flex flex-col gap-3 ">
+                <div>
+
+                    <div class="text-lg font-bold mt-10">Front-End</div>
+                    <div class="datas flex flex-col gap-2 rounded-lg p-4 mt-3 lg:p-8 bg-white/10 backdrop-blur-lg">
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">HTML5</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 90%;"></div>
+                            </div>
+                            <div class="percentage">90%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">CSS3</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 90%;"></div>
+                            </div>
+                            <div class="percentage">90%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">JavaScript</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 90%;"></div>
+                            </div>
+                            <div class="percentage">90%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Bootstrap</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 90%;"></div>
+                            </div>
+                            <div class="percentage">90%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">TailWindCss</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <div class="percentage">80%</div>
+                        </div>
+                    </div>
+
+                    <div class="text-lg font-bold mt-10">Back-End</div>
+                    <div class="datas flex flex-col gap-2 rounded-lg p-4 mt-3 lg:p-8 bg-white/10 backdrop-blur-lg ">
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">PHP</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Node JS</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Django</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                            </div>
+                            <div class="percentage">70%</div>
+                        </div>
+
+                    </div>
+
+                    <div class="text-lg font-bold mt-10">FrameWorks</div>
+                    <div class="datas flex flex-col gap-2 rounded-lg p-4 mt-3 lg:p-8 bg-white/10 backdrop-blur-lg">
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">React Js</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Next JS</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Express JS</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                            </div>
+                            <div class="percentage">70%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">React Native</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 50%;"></div>
+                            </div>
+                            <div class="percentage">50%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Ionic</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 50%;"></div>
+                            </div>
+                            <div class="percentage">50%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Electron JS</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 60%;"></div>
+                            </div>
+                            <div class="percentage">60%</div>
+                        </div>
+
+
+                    </div>
+
+                    <div class="text-lg font-bold mt-10">Programming Languages</div>
+                    <div class="datas flex flex-col gap-2 rounded-lg p-4 mt-3 lg:p-8 bg-white/10 backdrop-blur-lg">
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">C</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">C++</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 80%;"></div>
+                            </div>
+                            <div class="percentage">80%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Python</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                            </div>
+                            <div class="percentage">70%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Java</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 50%;"></div>
+                            </div>
+                            <div class="percentage">50%</div>
+                        </div>
+                        <div class="entries flex justify-betweeen items-center gap-4">
+                            <div class="text-base w-40 lg:w-28">Shell Script</div>
+                            <div class="w-full bg-gray-500 rounded-full h-2.5">
+                                <div class="bg-gradient-to-r from-purple-500 to-pink-500 h-2.5 rounded-full" style="width: 70%;"></div>
+                            </div>
+                            <div class="percentage">70%</div>
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section id="projects" class=" mt-20">
+        <h1 class="text-4xl text-center font-semibold">Projects</h1>
+        <p class="text-base text-center mt-2">Here are the some of my projects that i worked.</p>
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 grid-cols-1 gap-5 p-8 ">
+            <div class="frontend text-center rounded-lg p-1 bg-gradient-to-tr from-pink-500 via-indigo-400 to-purple-500 ">
+                <div class="bg-stone-800 h-full w-full rounded-lg ">
+                    <div class="bg-white/10 backdrop-blur-md h-full w-full p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold">College Website</h3>
+                        <br>
+                        <p>I made a Simple Static website for my college where I studied my computer science degree.</p>
+                        <div class="mt-5">
+                            <div class="text-sm font-semibold text-left ">Languages Used:</div>
+                            <div class="mt-2 flex gap-2">
+                                <div class="p-1 font-semibold w-20 border rounded-full">HTML</div>
+                                <div class="p-1 font-semibold w-20 border rounded-full">CSS</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend text-center rounded-lg p-1 bg-gradient-to-tr from-pink-500 via-indigo-400 to-purple-500 ">
+                <div class="bg-stone-800 h-full w-full rounded-lg ">
+                    <div class="bg-white/10 backdrop-blur-md h-full w-full p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold">Redirection Websites</h3>
+                        <br>
+                        <p>I made a Simple Redirection website which is quite similar to Bit.ly url shortner.</p>
+                        <div class="mt-5">
+                            <div class="text-sm font-semibold text-left ">Languages Used:</div>
+                            <div class="mt-2 flex gap-2">
+                                <div class="p-1 font-semibold w-20 border rounded-full">PHP</div>
+                                <div class="p-1 font-semibold w-20 border rounded-full">MYSQL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend text-center rounded-lg p-1 bg-gradient-to-tr from-pink-500 via-indigo-400 to-purple-500 ">
+                <div class="bg-stone-800 h-full w-full rounded-lg ">
+                    <div class="bg-white/10 backdrop-blur-md h-full w-full p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold">Database GUI</h3>
+                        <br>
+                        <p>While using Mysql in node js, it does'nt comes with a Database GUI, therfore I made one.</p>
+                        <div class="mt-5">
+                            <div class="text-sm font-semibold text-left ">Languages Used:</div>
+                            <div class="mt-2 flex gap-2">
+                                <div class="p-1 font-semibold w-20 border rounded-full">Node Js</div>
+                                <div class="p-1 font-semibold w-20 border rounded-full">MYSQL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="frontend text-center rounded-lg p-1 bg-gradient-to-tr from-pink-500 via-indigo-400 to-purple-500 ">
+                <div class="bg-stone-800 h-full w-full rounded-lg ">
+                    <div class="bg-white/10 backdrop-blur-md h-full w-full p-5 rounded-lg">
+                        <h3 class="text-xl font-semibold">Resume Builder Website</h3>
+                        <br>
+                        <p>Not only creating Resumes, you can also host your resume and share to other people.</p>
+                        <div class="mt-5">
+                            <div class="text-sm font-semibold text-left ">Languages Used:</div>
+                            <div class="mt-2 flex gap-2">
+                                <div class="p-1 font-semibold w-20 border rounded-full">PHP</div>
+                                <div class="p-1 font-semibold w-20 border rounded-full">MYSQL</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </section>
+
+    <section class="ctas">
+        <div class="fo-links flex justify-center items-center gap-3">
+            <a href="#abouts">About</a>|<a href="#skills">Skills</a>|<a href="#projects">Projects</a>
+        </div>
+        
+    </section>
+
+    <section class="footer flex flex-col lg:flex-row justify-between items-center mx-10 my-5">
+        <div class="footer-info flex items-center">
+            <div>&copy; <span id="year"></span> Made By chillfeast.</div>
+        </div>
+        <div class="chat flex gap-3">
+            <a href="">
+                <i class="fa-brands fa-github fa-xl lg:fa-2xl"></i>
+            </a>
+            <a href="">
+                <i class="fa-brands fa-linkedin fa-xl lg:fa-2xl"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+    <script>
+        var date = new Date().getFullYear();
+        var siteyear = document.getElementById('year');
+        siteyear.textContent = date;
+
+        function toggleMenu() {
+            menuIcon = document.querySelector(".menuIcon");
+            mobLink = document.querySelector(".moblinks");
+            menuIcon.classList.add("fa-bars")
+            menuIcon.classList.toggle("fa-xmark")
+            mobLink.classList.toggle("hidden")
+        }
+
+        var about = document.getElementById('about');
+        var skill = document.getElementById('skill');
+        var project = document.getElementById('project');
+        about.addEventListener('click', function() {
+            toggleMenu();
+
+            window.location = "#abouts";
+
+        })
+        skill.addEventListener('click', function() {
+            toggleMenu();
+            window.location = "#skills";
+        })
+        project.addEventListener('click', function() {
+            window.location = "#projects";
+            toggleMenu();
+        })
+    </script>
+</body>
+
+</html>
