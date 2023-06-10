@@ -8,6 +8,7 @@
     <title>Contact</title>
     <link rel="stylesheet" href="/output.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/067fc88846.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -64,7 +65,8 @@
                         <input type="email" name="email" id="email" placeholder="Enter your Email"
                             class=" focus:outline-none h-12 bg-white/20 backdrop-blur-xl w-full px-4 rounded-full">
                         <button type="submit" name="con-btn" id="con-btn"
-                            class="bg-indigo-500 px-4 py-2 text-base rounded-full">Send</button>
+                            class="bg-indigo-500 px-4 py-2 text-base rounded-full text-slate-100"><i
+                                class="fa-solid fa-paper-plane"></i></button>
                     </div>
                 </form>
             </div>
@@ -137,14 +139,11 @@
             lmsg.push(msg);
             localStorage.setItem("chatmsg", JSON.stringify(lmsg));
 
-            
 
-            const data = new URLSearchParams();
-            data.append('msg', msg );
-            data.append('email', em );
-            fetch("https://chillfeast.000webhostapp.com/mailme.php", {
+            formData = new FormData(form);
+            fetch("http://localhost:3000/pages/mailme.php", {
                 method: "POST",
-                body: data
+                body: formData
             })
                 .then(res => {
                     if (res.ok) {
@@ -169,6 +168,32 @@
             localStorage.removeItem("chatmsg");
             window.location.reload();
         })
+
+        const url = new URL(window.location.href);
+        const msg = url.searchParams.get("msg");
+        const writemsg = document.getElementById("message");
+
+        if (msg == "startproject") {
+            writemsg.value = "I like to give you a Project.";
+        } else if (msg == "webDesDet") {
+             writemsg.value = "Give more information about your web designing service.";
+        } else if (msg == "webDevDet") { 
+            writemsg.value = "Give more information about your web development service."; 
+        }
+        else if (msg == "uxDet") {
+             writemsg.value = "Give more information about your web development service."; 
+        }
+        else if (msg == "portfolio") {
+             writemsg.value = "I like to have a awesome portfolio for my Service. "; 
+        }
+        else if (msg == "smallb") {
+             writemsg.value = "I like to have a Website for my Agency. "; 
+        }
+        else if (msg == "enterprice") {
+             writemsg.value = "I like to have a Website for my Company. "; 
+        }
+
+
     </script>
 
 </body>
