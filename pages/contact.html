@@ -20,17 +20,17 @@
             class="msg-con h-full lg:w-1/2 w-full bg-stone-900 text-slate-100 lg:rounded-xl p-6 relative flex flex-col gap-4">
             <div class="msg-head flex justify-between">
                 <div class="flex items-center gap-2">
-                    <div class="bac-icon text-slate-100">
+                    <a href="/" class="bac-icon text-slate-100">
                         <i class="fa-solid fa-arrow-left"></i>
-                    </div>
-                    <div class="company-img">
+                    </a>
+                    <a href="/about" class="company-img">
                         <img src="/images/chillfeastlogo.png" alt=""
                             class="h-12 w-12 rounded-full border-2 border-indigo-500">
-                    </div>
-                    <div class="company-name">
+                    </a>
+                    <a href="/" class="company-name">
                         <h1 class="text-lg font-semibold">Chillfeast</h1>
                         <p class="text-gray-500 text-xs">Business chat</p>
-                    </div>
+                    </a>
                 </div>
 
                 <div>
@@ -59,6 +59,7 @@
             <div class="msg-inputs w-full">
                 <form id="cform" action="https://formspree.io/f/mvonjjag" method="post" class="w-full flex flex-col gap-3">
                     <div class="w-68">
+                        <span id="ferr" class="text-xs text-red-500 "></span>
                         <input type="text" name="message" id="message" placeholder="Message"
                             class="focus:outline-none h-12 bg-white/20 backdrop-blur-xl w-full px-4 rounded-full">
                     </div>

@@ -1,6 +1,7 @@
 
 const form = document.getElementById("cform");
 const messcon = document.getElementById("all-msg");
+const errholder = document.getElementById("ferr");
 
 function genchat() {
     const chattxt = JSON.parse(localStorage.getItem("chatmsg")) || [];
@@ -38,50 +39,42 @@ function consummit(event) {
     const messageinput = document.getElementById("message");
     const em = emailinput.value;
     const msg = messageinput.value;
-    const newDiv = document.createElement("div");
-    const nestedDiv = document.createElement("div");
-    const uniqid = Date.now().toString();
 
-    newDiv.classList.add("chat-card");
-    newDiv.classList.add("w-full");
-    newDiv.classList.add("flex");
-    newDiv.classList.add("justify-end");
+    if (em == '') {
+        errholder.textContent = "Enter the email to send message."
+    }
+    else if (msg == '') {
+        errholder.textContent = "empty message can't be sent."
+    }
+    else {
+        errholder.textContent = "";
+        const newDiv = document.createElement("div");
+        const nestedDiv = document.createElement("div");
+        const uniqid = Date.now().toString();
 
-    nestedDiv.classList.add("w-[80%]");
-    nestedDiv.classList.add("lg:p-6");
-    nestedDiv.classList.add("p-4");
-    nestedDiv.classList.add("bg-indigo-500");
-    nestedDiv.classList.add("rounded-md");
-    nestedDiv.setAttribute("data-id", uniqid);
+        newDiv.classList.add("chat-card");
+        newDiv.classList.add("w-full");
+        newDiv.classList.add("flex");
+        newDiv.classList.add("justify-end");
 
-    nestedDiv.textContent = msg;
+        nestedDiv.classList.add("w-[80%]");
+        nestedDiv.classList.add("lg:p-6");
+        nestedDiv.classList.add("p-4");
+        nestedDiv.classList.add("bg-indigo-500");
+        nestedDiv.classList.add("rounded-md");
+        nestedDiv.setAttribute("data-id", uniqid);
 
-    newDiv.appendChild(nestedDiv);
-    messcon.appendChild(newDiv);
+        nestedDiv.textContent = msg;
 
-    const lmsg = JSON.parse(localStorage.getItem("chatmsg")) || [];
-    lmsg.push(msg);
-    localStorage.setItem("chatmsg", JSON.stringify(lmsg));
-    form.submit();
+        newDiv.appendChild(nestedDiv);
+        messcon.appendChild(newDiv);
 
-/*
-    const conData = new FormData(form);
-     fetch("https://formspree.io/f/mvonjjag", {
-         method: "POST",
-         body: conData
-     })
-         .then(res => {
-             if (res.ok) {
-                 console.log("form data sent");
-                 messageinput.value = "";
-             } else {
-                 console.log("form data sent failed");
-             }
-         })
-         .catch(err => {
-             console.log("error:", err)
-         })
-*/
+        const lmsg = JSON.parse(localStorage.getItem("chatmsg")) || [];
+        lmsg.push(msg);
+        localStorage.setItem("chatmsg", JSON.stringify(lmsg));
+        form.submit();
+        messageinput.value = "";
+    }
 }
 
 form.addEventListener("submit", consummit);
