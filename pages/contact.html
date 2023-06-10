@@ -6,79 +6,170 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact</title>
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="/output.css">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body>
 
-    <!-- Messenger Chat plugin Code -->
-    <div id="fb-root"></div>
+    <section class="screen h-screen w-screen flex justify-center items-center lg:p-4 bg-stone-800">
 
-    <!-- Your Chat plugin code -->
-    <div id="fb-customer-chat" class="fb-customerchat">
-    </div>
-
-    <script>
-      var chatbox = document.getElementById('fb-customer-chat');
-      chatbox.setAttribute("page_id", "113441208438612");
-      chatbox.setAttribute("attribution", "biz_inbox");
-    </script>
-
-    <!-- Your SDK code -->
-    <script>
-      window.fbAsyncInit = function() {
-        FB.init({
-          xfbml: true,
-          version: 'v17.0'
-        });
-      };
-
-      (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!--<section class="h-screen flex flex-col justify-center items-center">
-        <h1 class="lg:text-6xl text-4xl font-bold mb-10 text-center">Contact Us</h1>
-        <div class="c-form ">
-
-            <form class="cform rounded-xl shadow-xl bg-white flex flex-col gap-2 px-6 py-8">
-                <div class="w-full">
-                    <h1 class="text-lg font-semibold">Name</h1>
-                    <input type="text" name="cname" placeholder="Enter your Email"
-                        class="cname p-2 bg-indigo-100 w-full mt-2 focus:outline-none">
+        <div
+            class="msg-con h-full lg:w-1/2 w-full bg-stone-900 text-slate-100 lg:rounded-xl p-6 relative flex flex-col gap-4">
+            <div class="msg-head flex justify-between">
+                <div class="flex items-center gap-2">
+                    <div class="bac-icon text-slate-100">
+                        <i class="fa-solid fa-arrow-left"></i>
+                    </div>
+                    <div class="company-img">
+                        <img src="/images/chillfeastlogo.png" alt=""
+                            class="h-12 w-12 rounded-full border-2 border-indigo-500">
+                    </div>
+                    <div class="company-name">
+                        <h1 class="text-lg font-semibold">Chillfeast</h1>
+                        <p class="text-gray-500 text-xs">Business chat</p>
+                    </div>
                 </div>
-                <div class="w-full">
-                    <h1 class="text-lg font-semibold">Email</h1>
-                    <input type="email" name="cemail" placeholder="Enter your Email"
-                        class="cemail p-2 bg-indigo-100 w-full mt-2 focus:outline-none">
-                </div>
+
                 <div>
-                    <h1 class="text-lg font-bold">I want you </h1>
-                    <select name="cquery" id="" class="cquery bg-indigo-100 p-2">
-                        <option value="Web Design and Develop">To Design and Develop my Website</option>
-                        <option value="Web Design">To Design my Website</option>
-                        <option value="Web Redesign">To Redesign my Website</option>
-                        <option value="Web Develop">To Develop my Website</option>
-                    </select>
+                    <button id="clear-btn" class="bg-red-500 text-slate-100 px-4 py-2 rounded-full">Clear</button>
                 </div>
-                <div class="w-full">
-                    <h1 class="text-lg font-semibold">Message</h1>
-                    <textarea name="cmessage" id="" cols="30" rows="10"
-                        class="cmessage mt-2 w-full h-24 resize-none p-2 bg-indigo-100 focus:outline-none"
-                        placeholder="Write Your Message"></textarea>
+            </div>
+
+            <div class="msg-field lg:h-[65%] h-[70%]  ">
+
+                <div class="flex flex-col gap-2 h-full w-full overflow-y-scroll gap-">
+
+                    <div id="all-msg" class="flex flex-col gap-6 p-4 text-slate text-base">
+
+                        <div class="chat-card w-full flex justify-start">
+                            <div class="w-[80%] lg:p-6 p-4 bg-indigo-500 rounded-md">
+                                <p>Hey!, We are Chillfeast, A web deveopment agency, Is there anything you need ask?</p>
+                            </div>
+                        </div>
+
+
+
+                    </div>
                 </div>
-                <div>
-                    <button type="submit"
-                        class="csend bg-indigo-500 font-bold text-slate-100 w-full py-2 text-md">Send</button>
-                </div>
-            </form>
+            </div>
+
+            <div class="msg-inputs w-full">
+                <form id="cform" class="w-full flex flex-col gap-3">
+                    <div class="w-68">
+                        <input type="text" name="message" id="message" placeholder="Message"
+                            class="focus:outline-none h-12 bg-white/20 backdrop-blur-xl w-full px-4 rounded-full">
+                    </div>
+                    <div class="flex gap-2">
+                        <input type="email" name="email" id="email" placeholder="Enter your Email"
+                            class=" focus:outline-none h-12 bg-white/20 backdrop-blur-xl w-full px-4 rounded-full">
+                        <button type="submit" name="con-btn" id="con-btn"
+                            class="bg-indigo-500 px-4 py-2 text-base rounded-full">Send</button>
+                    </div>
+                </form>
+            </div>
+
         </div>
-    </section>-->
+    </section>
+
+    <script>
+        const form = document.getElementById("cform");
+        const messcon = document.getElementById("all-msg");
+
+        function genchat() {
+            const chattxt = JSON.parse(localStorage.getItem("chatmsg")) || [];
+            chattxt.forEach((chats) => {
+                const newDiv = document.createElement("div");
+                const nestedDiv = document.createElement("div");
+                const uniqid = Date.now().toString();
+
+                newDiv.classList.add("chat-card");
+                newDiv.classList.add("w-full");
+                newDiv.classList.add("flex");
+                newDiv.classList.add("justify-end");
+
+                nestedDiv.classList.add("w-[80%]");
+                nestedDiv.classList.add("lg:p-6");
+                nestedDiv.classList.add("p-4");
+                nestedDiv.classList.add("bg-indigo-500");
+                nestedDiv.classList.add("rounded-md");
+                nestedDiv.setAttribute("data-id", uniqid);
+
+                nestedDiv.textContent = chats;
+
+                newDiv.appendChild(nestedDiv);
+                messcon.appendChild(newDiv);
+
+            })
+        }
+
+        window.addEventListener("DOMContentLoaded", genchat);
+
+        function consummit(event) {
+
+            event.preventDefault();
+            const emailinput = document.getElementById("email");
+            const messageinput = document.getElementById("message");
+            const em = emailinput.value;
+            const msg = messageinput.value;
+            const newDiv = document.createElement("div");
+            const nestedDiv = document.createElement("div");
+            const uniqid = Date.now().toString();
+
+            newDiv.classList.add("chat-card");
+            newDiv.classList.add("w-full");
+            newDiv.classList.add("flex");
+            newDiv.classList.add("justify-end");
+
+            nestedDiv.classList.add("w-[80%]");
+            nestedDiv.classList.add("lg:p-6");
+            nestedDiv.classList.add("p-4");
+            nestedDiv.classList.add("bg-indigo-500");
+            nestedDiv.classList.add("rounded-md");
+            nestedDiv.setAttribute("data-id", uniqid);
+
+            nestedDiv.textContent = msg;
+
+            newDiv.appendChild(nestedDiv);
+            messcon.appendChild(newDiv);
+
+            const lmsg = JSON.parse(localStorage.getItem("chatmsg")) || [];
+            lmsg.push(msg);
+            localStorage.setItem("chatmsg", JSON.stringify(lmsg));
+
+            
+
+            const data = new URLSearchParams();
+            data.append('msg', msg );
+            data.append('email', em );
+            fetch("https://chillfeast.000webhostapp.com/mailme.php", {
+                method: "POST",
+                body: data
+            })
+                .then(res => {
+                    if (res.ok) {
+                        console.log("form data sent");
+                        messageinput.value = "";
+                    } else {
+                        console.log("form data sent failed");
+                    }
+                })
+                .catch(err => {
+                    console.log("error:", err)
+                })
+
+
+
+        }
+
+        form.addEventListener("submit", consummit);
+
+        const clearBtn = document.getElementById("clear-btn")
+        clearBtn.addEventListener("click", () => {
+            localStorage.removeItem("chatmsg");
+            window.location.reload();
+        })
+    </script>
 
 </body>
 

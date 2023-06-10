@@ -1,7 +1,24 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
+app.use(cors());
 
 app.use(express.static(__dirname + "/public"));
+
+/*
+app.get("/", (res,req)=>{
+    const fetchUrl = req.url;
+    if(fetchUrl == "/"){
+        res.sendFile(__dirname + "/index.html");
+    }
+    else if(fetchUrl == "/about"){
+        res.sendFile(__dirname + "/pages/about.html");
+    }
+    else{
+        res.sendFile(__dirname + "/pages/404.html");
+    }
+})
+*/
 app.get('/', (req,res)=>{
     res.sendFile(__dirname + "/index.html");
 })
@@ -16,6 +33,10 @@ app.get('/privacy', (req,res)=>{
 })
 app.get('/projects', (req,res)=>{
     res.sendFile(__dirname + "/pages/projects.html");
+})
+
+app.get('/contact', (req,res)=>{
+    res.sendFile(__dirname + "/pages/contact.html");
 })
 
 

@@ -1,4 +1,7 @@
 # Logs
+
+.vercel
+/node_modules/
 logs
 *.log
 npm-debug.log*
